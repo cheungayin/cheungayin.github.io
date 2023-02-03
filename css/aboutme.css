@@ -1,0 +1,31 @@
+body{
+    background-color: white;
+    font-size: 0.95em;
+    font-family: Helvetica, sans-serif;
+    margin: 0.95em;
+    color: #303030;
+}
+
+h1{
+    font-size: 0.95em;
+    font-weight: bolder;
+}
+
+h2{
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+img{
+    max-width: 25vh;
+}
+
+div{
+    margin-top: rem;
+    margin-bottom: 1rem;
+}
