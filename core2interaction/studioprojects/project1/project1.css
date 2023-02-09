@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Henry-Regular";
+  src: url("/fonts/HenryTrial-205TF/HenryTrial-Regular.otf") format("opentype");
+}
+
+body{
+    /* font-family: "Henry-Regular"; */
+    font-size: 1rem;
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 90%;
+}
+
+h1, h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: -0.5rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    min-height: 95vh;
+}
+
+#pg5{
+    position: absolute;
+    left: 69vw;
+    top: 9vh;
+}
+
+#pg9{
+    position: absolute;
+    left: 28vw;
+    top: 22vh;
+}
+
+#pg13{
+    position: absolute;
+    left: 13vw;
+    top: 67vh;
+}
+
+#pg17{
+    position: absolute;
+    left: 57vw;
+    top: 83vh;
+}
+
+a:link{
+    text-decoration:none;
+    color:inherit;
+}
+  
+a:visited{
+    color:inherit;
+}
+  
+a:hover{
+    color:#1b0fd7;
+}
+  
+a:active{
+    color:#ee4411;
+}
+
+/* @media screen and (max-width: 800px){
+    h1, h2{
+        font-size: 1.5rem;
+    }
+} */
