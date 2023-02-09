@@ -1,31 +1,231 @@
+@font-face{
+    font-family: "DinamoABCWhyte-Thin";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Thin-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Thin-Trial.woff2") format("woff2");
+    font-weight:thin;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-ThinItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-ThinItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-ThinItalic-Trial.woff2") format("woff2");
+    font-weight:thin;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Extralight";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Extralight-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Extralight-Trial.woff2") format("woff2");
+    font-weight:lighter;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-ExtralightItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-ExtralightItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-ExtralightItalic-Trial.woff2") format("woff2");
+    font-weight:lighter;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Light";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff2") format("woff2");
+    font-weight:light;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-LightItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-LightItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-LightItalic-Trial.woff2") format("woff2");
+    font-weight:light;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Regular";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-RegularItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-RegularItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-RegularItalic-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Book";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Book-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Book-Trial.woff2") format("woff2");
+    font-weight:book;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-BookItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BookItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BookItalic-Trial.woff2") format("woff2");
+    font-weight:book;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Medium";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Medium-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Medium-Trial.woff2") format("woff2");
+    font-weight:medium;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-MediumItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-MediumItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-MediumItalic-Trial.woff2") format("woff2");
+    font-weight:medium;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Bold";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff2") format("woff2");
+    font-weight:bold;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-BoldItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BoldItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BoldItalic-Trial.woff2") format("woff2");
+    font-weight:bold;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Heavy";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Heavy-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Heavy-Trial.woff2") format("woff2");
+    font-weight:heavy;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-HeavyItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-HeavyItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-HeavyItalic-Trial.woff2") format("woff2");
+    font-weight:heavy;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Black";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Black-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Black-Trial.woff2") format("woff2");
+    font-weight:black;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-BlackItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BlackItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-BlackItalic-Trial.woff2") format("woff2");
+    font-weight:black;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Super";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Super-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Super-Trial.woff2") format("woff2");
+    font-weight:super;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-SuperItalic";
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-SuperItalic-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-SuperItalic-Trial.woff2") format("woff2");
+    font-weight:super;
+    font-style:italic;
+}
+
 body{
     background-color: white;
-    font-size: 0.95em;
-    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-family: "DinamoABCWhyte-Regular";
     margin: 0.95em;
     color: #303030;
 }
 
 h1{
+    font-family: "DinamoABCWhyte-Heavy";
     font-size: 0.95em;
     font-weight: bolder;
 }
 
 h2{
+    font-family: "DinamoABCWhyte-Heavy";
     font-size: 0.95em;
     font-weight: bold;
 }
 
 h3{
+    font-family: "DinamoABCWhyte-Heavy";
     font-size: 0.95em;
     font-weight: normal;
 }
 
 img{
-    max-width: 25vh;
+    width:20vw;
 }
 
 div{
-    margin-top: rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    display: flex;
+    align-self: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+}
+
+.menu a:link{
+    text-decoration:underline;
+    color: inherit;
+}
+
+.menu a:visited{
+    display: inline-block;
+    color: inherit;
+}
+
+.menu a:hover{
+    color:#1b0fd7;
+}
+  
+.menu a:active{
+    color: #1b0fd7;
+}
+
+#aboutme{
+    margin-right: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
