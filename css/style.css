@@ -185,7 +185,7 @@ h3{
 }
 
 img{
-    max-width: 25vh;
+    max-width: 30vh;
 }
 
 div{
@@ -204,17 +204,17 @@ div{
 }
 
 .menu a:link{
-    text-decoration: wavy underline ;
+    text-decoration: wavy underline;
     color: inherit;
 }
 
 .menu a:hover{
-    text-decoration: wavy underline ;
+    text-decoration: wavy underline;
     color: lime;
 }
 
 a:link{
-    text-decoration: underline ;
+    text-decoration: underline;
     color: inherit;
 }
 
@@ -256,6 +256,25 @@ a:active{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+#contact a:link{
+    text-decoration: none;
+    color: inherit;
+}
+
+#contact a:hover{
+    color:#1b0fd7;
+    text-decoration: dotted underline;
+}
+
+#contact a:visited{
+    display: inline-block;
+    color: inherit;
+}
+
+#contact a:active{
+    color: #ff3000;
 }
 
 
