@@ -1,23 +1,23 @@
 @font-face{
     font-family: "DinamoABCWhyte-Light";
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff") format("woff");
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff2") format("woff2");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff2") format("woff2");
     font-weight:light;
     font-style:normal;
 }
 
 @font-face{
     font-family: "DinamoABCWhyte-Regular";
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff") format("woff");
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff2") format("woff2");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff2") format("woff2");
     font-weight:normal;
     font-style:normal;
 }
 
 @font-face{
     font-family: "DinamoABCWhyte-Bold";
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff") format("woff");
-    src:url("../studioprojects/fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff2") format("woff2");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff") format("woff");
+    src:url("../fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff2") format("woff2");
     font-weight:bold;
     font-style:normal;
 }
