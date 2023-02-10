@@ -115,6 +115,14 @@ a:active{
     font-family: "DinamoABCWhyte-Light";
 }
 
+iframe{
+    opacity: 0;
+}
+
+iframe:hover{
+    opacity: 1;
+}
+
 @media (max-width: 800px){
     .things{
         display: grid;
