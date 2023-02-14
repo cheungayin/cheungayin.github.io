@@ -109,10 +109,12 @@ a:active{
 
 .box p{
     font-family: "DinamoABCWhyte-Light";
+    font-size: 0.75rem;
 }
 
 .box ul{
     font-family: "DinamoABCWhyte-Light";
+    font-size: 0.75rem;
 }
 
 @media (max-width: 800px){

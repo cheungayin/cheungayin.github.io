@@ -55,24 +55,24 @@ main section{
 #one{
     padding-left: 1em;
     padding-right: 1em;
-    border-right: 0.15vh solid black;
 }
 
 #two{
     padding-left: 1em;
     padding-right: 1em;
-    border-right: 0.15vh solid black;
+    border-left: 0.15vh solid black;
 }
 
 #three{
     padding-left: 1em;
     padding-right: 1em;
-    border-right: 0.15vh solid black;
+    border-left: 0.15vh solid black;
 }
 
 #four{
     padding-left: 1em;
     padding-right: 1em;
+    border-left: 0.15vh solid black;
 }
 
 h1{
@@ -80,6 +80,7 @@ h1{
     font-weight: 400;
     text-align: left;
     margin-top: -0.5rem;
+    line-height: 2rem;
 }
 
 h2{
@@ -188,8 +189,91 @@ a:active{
     color: red;
 }
 
-/* @media screen and (max-width: 800px){
+input[type=text]{
+    color: blue;
+}
+
+/* input[type=text]:hover{
+    opacity: 1;
+} */
+
+.showblank{
+    opacity: 0;
+}
+
+.showblank:hover{
+    opacity: 1;
+}
+
+.showblank:focus{
+    opacity: 1;
+    color: red;
+}
+
+input[type="text"]::selection {
+    background-color: red;
+    color: white;
+}
+
+/* input:hover{
+    color: blue;
+} */
+
+@media (max-width: 800px){
     h1, h2{
         font-size: 1.5rem;
     }
+    main{
+        flex-direction: column;
+    }
+    main section{
+        height: 100vh;
+        width: 96vw;
+        overflow-x: auto;
+        overflow-y: scroll;
+    }
+    #one{
+        padding-left: 1em;
+        margin-right: 2em;
+    }
+    #two, #three, #four{
+        padding-left: 1em;
+        margin-right: 1em;
+        border-left: none;
+    }
+    .showblank{
+        opacity: 1;
+    }
+    .showblank:focus{
+        opacity: 1;
+        color: #1b0fd7;
+    }
+    input[type="text"]::selection {
+        background-color: white;
+        color: #1b0fd7;
+    }
+    .blurone{
+        filter: blur(1px);
+    }
+    
+    .blurtwo{
+        filter: blur(2px);
+    }
+    
+    .blurthree{
+        filter: blur(3px);
+    }
+    
+    .blurone:hover, .blurtwo:hover, .blurthree:hover{
+        filter: none;
+    }
+    
+}
+
+/* ::-moz-selection{
+    background:#ffd966;
+  }
+  
+::selection{
+    background:#ffd966;
 } */
