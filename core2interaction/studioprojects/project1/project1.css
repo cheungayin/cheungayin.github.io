@@ -98,6 +98,14 @@ h3{
     margin-right: 1em;
 }
 
+#submit{
+    z-index: 2;
+}
+
+#next{
+    z-index: 1;
+}
+
 .center{
     display: flex;
     flex-direction: column;
@@ -220,8 +228,11 @@ input[type="text"]::selection {
 } */
 
 @media (max-width: 800px){
-    h1, h2{
+    h1{
         font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1rem;
     }
     main{
         flex-direction: column;
