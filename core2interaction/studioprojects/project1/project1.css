@@ -270,7 +270,7 @@ input[type="text"]::selection {
         padding-left: 1em;
         margin-right: 1em;
         border-left: none;
-    }
+    } 
     .showblank{
         opacity: 1;
     }
