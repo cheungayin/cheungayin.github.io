@@ -161,7 +161,7 @@ h2{
 #pg17{
     position: absolute;
     left: 57vw;
-    top: 83vh;
+    top: 77vh;
 }
 
 #begin1{
@@ -241,7 +241,14 @@ input[type="text"]::selection {
     color: white;
 }
 
+.hint{
+    color: white;
+}
 
+.hint::selection{
+    color: white;
+    background-color: red;
+}
 /* input:hover{
     color: blue;
 } */
