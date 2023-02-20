@@ -116,13 +116,16 @@ h2{
     margin-right: 1em;
 } */
 
+/* 
+for original idea of having a submit button on top of next button on the first page of each section
+
 #submit{
     z-index: 2;
 }
 
 #next{
     z-index: 1;
-}
+} */
 
 .center{
     display: flex;
@@ -241,17 +244,49 @@ input[type="text"]::selection {
     color: white;
 }
 
-.hint{
+/* for hint that shows in first box when all the are selected */
+/*.hint{
     color: white;
 }
 
 .hint::selection{
     color: white;
     background-color: red;
-}
+} */
+
 /* input:hover{
     color: blue;
 } */
+
+.hint{
+    position: relative;
+    display: inline-block;
+}
+  
+.hint .hinttext{
+    visibility: hidden;
+    width: 13vw;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    top: 100%;
+    position: absolute;
+    z-index: 1;
+    font-size: 0.85em;
+    line-height: 1em;
+    font-style: italic;
+}
+  
+.hint:hover .hinttext{
+    visibility: visible;
+}
+
+.hinttext::selection{
+    color: white;
+    background-color: red;
+}
 
 @media (max-width: 800px){
     h1{
@@ -264,7 +299,7 @@ input[type="text"]::selection {
         flex-direction: column;
     }
     main section{
-        height: 100vh;
+        height: 90vh;
         width: 96vw;
         overflow-x: auto;
         overflow-y: scroll;
@@ -277,13 +312,20 @@ input[type="text"]::selection {
         padding-left: 1em;
         margin-right: 1em;
         border-left: none;
-    } 
+        border-top: 0.15vh solid black;
+    }
+    #four{
+        margin-bottom: 2rem;
+    }
     .showblank{
         opacity: 1;
     }
     .showblank:focus{
         opacity: 1;
         color: #1b0fd7;
+    }
+    .hint .hinttext{
+        width: 50vw;
     }
     /* input[type="text"]::selection {
         background-color: white;
