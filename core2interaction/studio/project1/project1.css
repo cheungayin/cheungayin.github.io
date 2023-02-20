@@ -244,6 +244,21 @@ input[type="text"]::selection {
     color: white;
 }
 
+#tab{
+    -moz-tab-size: 5; /* Firefox */
+    tab-size: 4;
+}
+
+pre{
+    white-space: pre-wrap;
+    line-height: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5em;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: -1em;
+}
+
 /* for hint that shows in first box when all the are selected */
 /*.hint{
     color: white;
