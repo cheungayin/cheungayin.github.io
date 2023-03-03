@@ -187,6 +187,7 @@ h3{
 
 img{
     width: 100%;
+    height: auto;
 }
 
 div{
@@ -328,6 +329,7 @@ a:active{
     /* margin-top: 8px; */
     vertical-align: middle;
     width: 100%;
+    height: auto;
 }
 
 #typecontrastgrid{
