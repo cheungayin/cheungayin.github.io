@@ -1,7 +1,7 @@
 @font-face{
     font-family: "ABCMonumentGrotesk-Ultra";
-    src:url("../fonts/ABC-Monument-Grotesk/ABCMonumentGrotesk-Ultra-Trial.woff") format("woff");
-    src:url("../fonts/ABC-Monument-Grotesk/ABCMonumentGrotesk-Ultra-Trial.woff2") format("woff2");
+    src:url("../recreateposter/fonts/ABC-Monument-Grotesk/ABCMonumentGrotesk-Ultra-Trial.woff") format("woff");
+    src:url("../recreateposter/fonts/ABC-Monument-Grotesk/ABCMonumentGrotesk-Ultra-Trial.woff2") format("woff2");
     font-weight:ultra;
     font-style:normal;
 }
