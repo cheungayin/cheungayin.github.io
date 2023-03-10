@@ -28,6 +28,7 @@ body{
     font-family: "DinamoABCWhyte-Regular";
     margin: 0.95em;
     color: #000000;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>☝️</text></svg>") 16 0, auto;
 }
 
 h1{
@@ -70,11 +71,13 @@ div{
 .menu a:link{
     text-decoration: wavy underline ;
     color: inherit;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
 }
 
 .menu a:hover{
     text-decoration: wavy underline ;
     color: lime;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
 }
 
 a:link{
@@ -91,6 +94,7 @@ a:hover{
     color:#1b0fd7;
     text-decoration: dotted underline;
     /* font-family: "DinamoABCWhyte-Heavy"; */
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
 }
   
 a:active{
