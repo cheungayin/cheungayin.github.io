@@ -1,0 +1,15 @@
+node_modules
+scss
+css
+*.log
+package-lock.json
+.DS_Store
+zip
+**/.DS_Store
+.vercel
+.parcel-cache
+.idea
+dist
+/deploy-preview
+/tmp
+.env
