@@ -209,10 +209,12 @@ li{
 
 ::-moz-selection{
     background: yellow;
+    color: #000000;
 }
   
 ::selection{
     background: yellow;
+    color: #000000;
 }
 
 h1{
@@ -221,25 +223,28 @@ h1{
     font-size: 9rem;
     margin-top: 20vh;
     margin-bottom: 25vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
     line-height: 9rem;
 }
 
 .about{
+    display: flex;
     position: absolute;
     width: 100vw;
     height: max-content;
     left: 0;
-    display: flex;
     z-index: -1;
     padding-left: 2em;
     padding-right: 2em;
+    flex-direction: column;
 }
 
 .about div{
     text-align: left;
     flex-grow: 1;
     height: max-content;
-    width: 50%;
+    width: 85vw;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: -1;
@@ -299,19 +304,17 @@ h1{
 
 .cafeinfo-grid div{
     border-radius: 1em;
-    padding: 1.5em;
-    border: 3px solid blue;
+    padding: 2em;
+    border: 2px solid black;
     /* transition: 0.5s; */
     font-size: 1.25rem;
     line-height: 1.75rem;
 }
 
-/* .coffeeshop{
-    position: relative;
-    width: 100vw;
-    height: auto;
-    z-index: -1;
-} */
+.cafeinfo-grid img{
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
 
 /* .websiteFrame{
     position: fixed;
@@ -352,10 +355,6 @@ h1{
 } */
 
 
-/* #kaigodata{
-    flex-basis: 45%;
-} */
-
 @media screen and (max-width: 768px){
     .header{
         /* justify-content: center; */
@@ -367,6 +366,12 @@ h1{
         text-align: left;
         font-size: 1.5rem;
     }
+
+    body{
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
+
     .navigation{
         display: none;
     }
@@ -374,16 +379,6 @@ h1{
     .mobile-menu{
         opacity: 1;
         display: block;
-    }
-
-    .about{
-        flex-direction: column;
-        height: max-content;
-    }
-
-    .about div{
-        height: max-content;
-        width: 85vw;
     }
 
     #left{
@@ -397,6 +392,10 @@ h1{
     h1{
         font-size: 6.5rem;
         line-height: 6.5rem;
+    }
+
+    .cafeinfo-grid{
+        grid-template-columns: repeat(1, 1fr);
     }
 
     /* .first-section{
@@ -429,5 +428,13 @@ h1{
     .grid-container div{
         border-radius: 1em;
         padding: 1.75em
+    }
+
+    .about{
+        flex-direction: row;
+    }
+
+    .about div{
+        width: 50%;
     }
 }

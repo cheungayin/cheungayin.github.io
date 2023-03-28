@@ -15,7 +15,7 @@ false,
 );
 
 
-fetch('kaigo.json')
+fetch('./kaigo.json')
     .then(response => response.json())
     .then(data => {
         // Access the div element
@@ -25,21 +25,21 @@ fetch('kaigo.json')
         data.forEach(item => {
         const div = document.createElement('div');
         const p = document.createElement('p');
-        const p1 = document.createElement('p');
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const p4 = document.createElement('p');
         const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
         const img = document.createElement('img');
         /* const audio = document.createElement('audio'); */
 
         // Set the text content and href attributes for the link
         p.textContent = item.emoji;
-        p1.textContent = 'gender: ' + item.gender;
-        p2.textContent = 'appearance: ' + item.appearance;
-        p3.textContent = item.name;
-        p4.textContent = 'order: ' + item.order;
-        p5.textContent = 'notes: ' + item.notes;
+        p2.textContent = 'gender: ' + item.gender;
+        p3.textContent = 'appearance: ' + item.appearance;
+        p4.textContent = item.name;
+        p5.textContent = 'order: ' + item.order;
+        p6.textContent = 'notes: ' + item.notes;
         img.src = "./img/" + item.img;
         /* audio.src = "audio/" + item.audio; */
 
@@ -55,11 +55,11 @@ fetch('kaigo.json')
         // Add the HTML tags to webpage
         div.appendChild(img);
         div.appendChild(p);
-        div.appendChild(p3);
-        div.appendChild(p1);
-        div.appendChild(p2);
         div.appendChild(p4);
+        div.appendChild(p2);
+        div.appendChild(p3);
         div.appendChild(p5);
+        div.appendChild(p6);
         /* div.appendChild(audio); */
         kaigodata.appendChild(div);
         });
@@ -67,7 +67,7 @@ fetch('kaigo.json')
     .catch(error => console.error(error));
 
 
-fetch('dreamers.json')
+fetch('./dreamers.json')
     .then(response => response.json())
     .then(data => {
         // Access the div element
@@ -77,21 +77,21 @@ fetch('dreamers.json')
         data.forEach(item => {
         const div = document.createElement('div');
         const p = document.createElement('p');
-        const p1 = document.createElement('p');
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const p4 = document.createElement('p');
         const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
         const img = document.createElement('img');
         /* const audio = document.createElement('audio'); */
 
         // Set the text content and href attributes for the link
         p.textContent = item.emoji;
-        p1.textContent = 'gender: ' + item.gender;
-        p2.textContent = 'appearance: ' + item.appearance;
-        p3.textContent = item.name;
-        p4.textContent = 'order: ' + item.order;
-        p5.textContent = 'notes: ' + item.notes;
+        p2.textContent = 'gender: ' + item.gender;
+        p3.textContent = 'appearance: ' + item.appearance;
+        p4.textContent = item.name;
+        p5.textContent = 'order: ' + item.order;
+        p6.textContent = 'notes: ' + item.notes;
         img.src = "./img/" + item.img;
         /* audio.src = "audio/" + item.audio; */
 
@@ -107,11 +107,11 @@ fetch('dreamers.json')
         // Add the HTML tags to webpage
         div.appendChild(img);
         div.appendChild(p);
-        div.appendChild(p3);
-        div.appendChild(p1);
-        div.appendChild(p2);
         div.appendChild(p4);
+        div.appendChild(p2);
+        div.appendChild(p3);
         div.appendChild(p5);
+        div.appendChild(p6);
         /* div.appendChild(audio); */
         dreamersdata.appendChild(div);
         });
@@ -119,7 +119,7 @@ fetch('dreamers.json')
     .catch(error => console.error(error));
 
 
-    fetch('haven.json')
+    fetch('./haven.json')
     .then(response => response.json())
     .then(data => {
         // Access the div element
@@ -129,21 +129,21 @@ fetch('dreamers.json')
         data.forEach(item => {
         const div = document.createElement('div');
         const p = document.createElement('p');
-        const p1 = document.createElement('p');
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const p4 = document.createElement('p');
         const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
         const img = document.createElement('img');
         /* const audio = document.createElement('audio'); */
 
         // Set the text content and href attributes for the link
         p.textContent = item.emoji;
-        p1.textContent = 'gender: ' + item.gender;
-        p2.textContent = 'appearance: ' + item.appearance;
-        p3.textContent = item.name;
-        p4.textContent = 'order: ' + item.order;
-        p5.textContent = 'notes: ' + item.notes;
+        p2.textContent = 'gender: ' + item.gender;
+        p3.textContent = 'appearance: ' + item.appearance;
+        p4.textContent = item.name;
+        p5.textContent = 'order: ' + item.order;
+        p6.textContent = 'notes: ' + item.notes;
         img.src = "./img/" + item.img;
         /* audio.src = "audio/" + item.audio; */
 
@@ -159,11 +159,11 @@ fetch('dreamers.json')
         // Add the HTML tags to webpage
         div.appendChild(img);
         div.appendChild(p);
-        div.appendChild(p3);
-        div.appendChild(p1);
-        div.appendChild(p2);
         div.appendChild(p4);
+        div.appendChild(p2);
+        div.appendChild(p3);
         div.appendChild(p5);
+        div.appendChild(p6);
         /* div.appendChild(audio); */
         havendata.appendChild(div);
         });
@@ -171,7 +171,7 @@ fetch('dreamers.json')
     .catch(error => console.error(error));
 
 
-fetch('baxterst.json')
+fetch('./baxterst.json')
     .then(response => response.json())
     .then(data => {
         // Access the div element
@@ -181,21 +181,21 @@ fetch('baxterst.json')
         data.forEach(item => {
         const div = document.createElement('div');
         const p = document.createElement('p');
-        const p1 = document.createElement('p');
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const p4 = document.createElement('p');
         const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
         const img = document.createElement('img');
         /* const audio = document.createElement('audio'); */
 
         // Set the text content and href attributes for the link
         p.textContent = item.emoji;
-        p1.textContent = 'gender: ' + item.gender;
-        p2.textContent = 'appearance: ' + item.appearance;
-        p3.textContent = item.name;
-        p4.textContent = 'order: ' + item.order;
-        p5.textContent = 'notes: ' + item.notes;
+        p2.textContent = 'gender: ' + item.gender;
+        p3.textContent = 'appearance: ' + item.appearance;
+        p4.textContent = item.name;
+        p5.textContent = 'order: ' + item.order;
+        p6.textContent = 'notes: ' + item.notes;
         img.src = "./img/" + item.img;
         /* audio.src = "audio/" + item.audio; */
 
@@ -211,11 +211,11 @@ fetch('baxterst.json')
         // Add the HTML tags to webpage
         div.appendChild(img);
         div.appendChild(p);
-        div.appendChild(p3);
-        div.appendChild(p1);
-        div.appendChild(p2);
         div.appendChild(p4);
+        div.appendChild(p2);
+        div.appendChild(p3);
         div.appendChild(p5);
+        div.appendChild(p6);
         /* div.appendChild(audio); */
         baxterstdata.appendChild(div);
         });
@@ -223,7 +223,7 @@ fetch('baxterst.json')
     .catch(error => console.error(error));
 
     
-fetch('cafeinfo.json')
+fetch('./cafeinfo.json')
     .then(response => response.json())
     .then(data => {
         // Access the div element
@@ -233,21 +233,29 @@ fetch('cafeinfo.json')
         data.forEach(item => {
         const div = document.createElement('div');
         const p = document.createElement('p');
-        const p1 = document.createElement('p');
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const p4 = document.createElement('p');
         const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
+        const p7 = document.createElement('p');
+        const p8 = document.createElement('p');
+        const p9 = document.createElement('p');
         const img = document.createElement('img');
+        const a = document.createElement('a');
         /* const audio = document.createElement('audio'); */
 
         // Set the text content and href attributes for the link
-        p.textContent = item.shop;
-        p1.textContent = 'date visited: ' + item.datevisited;
-        p2.textContent = 'appearance: ' + item.appearance;
+        a.textContent = item.shop;
+        a.href = item.link;
+        p2.textContent = 'date visited: ' + item.datevisited;
         p3.textContent = 'address: ' + item.address;
-        p4.textContent = 'address: ' + item.address;
-        p5.textContent = 'open hours: ' + item.openhours;
+        p4.textContent = 'open hours: ' + item.openhours;
+        p5.textContent = 'phone no.: ' + item.phonenumber;
+        p6.textContent = 'what we aim to do: ' + item.description;
+        p7.textContent = 'is there a bathroom? ' + item.bathroom;
+        p8.textContent = 'what did i do and order? ' + item.whatididandorder;
+        p9.textContent = 'my thoughts on the space: ' + item.notes;
         img.src = "./img/" + item.img;
         /* audio.src = "audio/" + item.audio; */
 
@@ -262,15 +270,17 @@ fetch('cafeinfo.json')
         
         // Add the HTML tags to webpage
         div.appendChild(img);
-        div.appendChild(p);
-        div.appendChild(p3);
-        div.appendChild(p1);
+        div.appendChild(a);
         div.appendChild(p2);
+        div.appendChild(p3);
         div.appendChild(p4);
         div.appendChild(p5);
+        div.appendChild(p6);
+        div.appendChild(p7);
+        div.appendChild(p8);
+        div.appendChild(p9);
         /* div.appendChild(audio); */
         cafedata.appendChild(div);
         });
     })
     .catch(error => console.error(error));
-
