@@ -1,0 +1,190 @@
+@font-face{
+    font-family: "AtlasGrotesk-Regular";
+    src:url("../fonts/Atlas_Grotesk_Family/AtlasGrotesk-Regular-Trial.woff") format("woff");
+    src:url("../fonts/Atlas_Grotesk_Family/AtlasGrotesk-Regular-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "AtlasGrotesk-Medium";
+    src:url("../fonts/Atlas_Grotesk_Family/AtlasGrotesk-Medium-Trial.woff") format("woff");
+    src:url("../fonts/Atlas_Grotesk_Family/AtlasGrotesk-Medium-Trial.woff2") format("woff2");
+    font-weight:medium;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "SharpGroteskBook-23";
+    src:url("../fonts/SharpGrotesk/SharpGroteskBook-23.woff") format("woff");
+    src:url("../fonts/SharpGrotesk/SharpGroteskBook-23.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* color: #f7f5f2 */
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    top: 0;
+    position: sticky;
+    margin-left: 0;
+    background-color: #ffffff;
+}
+
+.menu-left{
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+}
+
+.menu-right{
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+}
+
+h1{
+    font-family: "SharpGroteskBook-23";
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+}
+
+h2{
+    font-family: "SharpGroteskBook-23";
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+}
+
+h3{
+    font-family: "AtlasGrotesk-Medium";
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+body{
+    font-family: "AtlasGrotesk-Regular";
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    right: 0;
+}
+
+.darkbackground{
+    background-color: #1d1919;
+    color: #f7f5f2;
+    width: 100vw;
+}
+
+.lightbackground{
+    background-color: #f7f5f2;
+    color: #1d1919;
+}
+
+.buttonwhite{
+    background-color: #4a85f7;
+    font-family: "AtlasGrotesk-Medium";
+    border: none;
+    color: #f7f5f2;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.buttonblack{
+    background-color: #4a85f7;
+    font-family: "AtlasGrotesk-Medium";
+    border: none;
+    color: #1d1919;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.flex1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex1box{
+    flex-basis: 25%;
+}
+
+.flex2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex2box{
+    flex-basis: 50%;
+}
+
+.flexbox2dropdown{
+    flex-direction: column;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    font-family: "AtlasGrotesk-Medium";
+    font-size: 20px;
+    line-height: 30px;
+}
+
+li{
+    font-family: "AtlasGrotesk-Regular";
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 1vh;
+}
+
+/* extra(?) small devices */
+@media screen and (max-width: 480px){
+    .flex1box{
+        flex-basis: 100%;
+    }
+    .buttonwhite{
+        opacity: 0;
+    }
+}
+
+/* medium devices */
+@media screen and (max-width: 1024px){
+    .flex1box{
+        flex-basis: 50%;
+    }
+    .menu-left{
+        opacity: 0;
+    }
+}
