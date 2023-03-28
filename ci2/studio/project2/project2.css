@@ -83,7 +83,7 @@ li{
 }
 
 .header a:hover{
-    color: blue;
+    color: #0000ff;
 }
 
 .header a:visited{
@@ -158,7 +158,7 @@ img{
 }
 
 .mobile-navigation{
-    background: yellow;
+    background: #ffff00;
     min-height: 100vh;
     width: 100%;
     position: fixed;
@@ -208,12 +208,12 @@ li{
 } */
 
 ::-moz-selection{
-    background: yellow;
+    background: #ffff00;
     color: #000000;
 }
   
 ::selection{
-    background: yellow;
+    background: #ffff00;
     color: #000000;
 }
 
@@ -282,8 +282,8 @@ h1{
     /* transition: 0.5s; */
     font-size: 1.25rem;
     line-height: 1.75rem;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .grid-container img{
@@ -305,7 +305,7 @@ h1{
 .cafeinfo-grid div{
     border-radius: 1em;
     padding: 2em;
-    border: 2px solid black;
+    border: 2px solid #000000;
     /* transition: 0.5s; */
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -314,6 +314,28 @@ h1{
 .cafeinfo-grid img{
     border-radius: 0.5em;
     margin-bottom: 1em;
+}
+
+.alldata-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1.25em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+    align-content: center;
+    width: 95vw;
+    height: max-content;
+}
+
+.alldata-grid div{
+    padding: 0.5em;
+    /* border: 3px solid blue; */
+    /* transition: 0.5s; */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* .websiteFrame{

@@ -284,3 +284,55 @@ fetch('./cafeinfo.json')
         });
     })
     .catch(error => console.error(error));
+
+
+fetch('./alldata.json')
+    .then(response => response.json())
+    .then(data => {
+        // Access the div element
+        const alldata = document.getElementById('alldata');
+                
+        // Loop through the data and add each item to the div
+        data.forEach(item => {
+        const div = document.createElement('div');
+        const p = document.createElement('p');
+        const p2 = document.createElement('p');
+        const p3 = document.createElement('p');
+        const p4 = document.createElement('p');
+        const p5 = document.createElement('p');
+        const p6 = document.createElement('p');
+        const img = document.createElement('img');
+        /* const audio = document.createElement('audio'); */
+
+        // Set the text content and href attributes for the link
+        p.textContent = item.emoji;
+        p2.textContent = 'gender: ' + item.gender;
+        p3.textContent = 'appearance: ' + item.appearance;
+        p4.textContent = item.name;
+        p5.textContent = 'order: ' + item.order;
+        p6.textContent = 'notes: ' + item.notes;
+        img.src = "./img/" + item.img;
+        /* audio.src = "audio/" + item.audio; */
+
+        /* 
+        * Onclick function
+        * whenever a image is clicked
+        * associated audio will be played
+        */
+        /* img.onclick = function() {
+            audio.play();
+        } */
+        
+        // Add the HTML tags to webpage
+        // div.appendChild(img);
+        div.appendChild(p);
+        // div.appendChild(p4);
+        // div.appendChild(p2);
+        // div.appendChild(p3);
+        // div.appendChild(p5);
+        // div.appendChild(p6);
+        /* div.appendChild(audio); */
+        alldata.appendChild(div);
+        });
+    })
+    .catch(error => console.error(error));
