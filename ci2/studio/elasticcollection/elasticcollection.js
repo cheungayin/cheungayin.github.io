@@ -15,6 +15,33 @@ false,
 );
 
 
+// autoplay audio mute and unmute button 
+/* const audio = document.getElementById("cafe-audio");
+const mutebtn = document.getElementById("mute-btn");
+
+mutebtn.addEventListener("click", () => {
+  if (audio.muted) {
+    audio.muted = false;
+    mutebtn.textContent = "mute";
+  }
+  else {
+    audio.muted = true;
+    mutebtn.textContent = "unmute";
+  }
+}); */
+
+
+// check if the user is on a mobile device
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+// get the audio element
+const audio = document.getElementById("cafe-audio");
+
+// if the user is on mobile, remove the audio element from the DOM
+if (isMobile) {
+  audio.parentNode.removeChild(audio);
+}
+
 fetch('./kaigo.json')
 .then(response => response.json())
 .then(data => {
