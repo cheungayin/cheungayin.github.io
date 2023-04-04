@@ -234,7 +234,8 @@ button:focus{
 }
 
 .clickhint{
-    font-family: "blaze-rules-regitalic";
+    font-family: "blaze-rules-regitalic", sans-serif;
+    font-style: italic;
     font-size: 1.25rem;
     text-align: right;
     margin-top: 0;
@@ -324,7 +325,7 @@ h1{
 #left{
     left: 0;
     text-align: left;
-    margin-top: 3vh;
+    margin-top: 5vh;
 }
 
 #mute-btn{
@@ -414,6 +415,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 0.25em;
+    grid-row-gap: 1.25em;
     margin-left: 1em;
     margin-right: 1em;
     margin-top: 1em;
@@ -547,7 +549,7 @@ h1{
 
     .alldata-grid{
         /* margin-top: -0.5em; */
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 90vw;
     }
 
