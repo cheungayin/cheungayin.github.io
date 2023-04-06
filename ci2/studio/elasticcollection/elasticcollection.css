@@ -549,7 +549,7 @@ h1{
 
     .alldata-grid{
         /* margin-top: -0.5em; */
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 90vw;
     }
 
