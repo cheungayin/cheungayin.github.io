@@ -22,6 +22,96 @@
     font-style:normal;
 }
 
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    margin-right: 1.5rem;
+}
+
+.header{
+    margin-top: -0.95em;
+    width: 97vw;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+}
+
+.main-title{
+    font-weight: bolder;
+    text-align: left;
+}
+
+.main-title a:link{
+    text-decoration: none;
+}
+
+.main-title a:hover{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🏠</text></svg>") 16 0, auto;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-right: -1.9em;
+}
+
+.mobile-menu{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    margin-right: 1em;
+}
+
+.mobile-navigation{
+    background: #000000;
+    margin-top: -0.95em;
+    margin-left: -0.95em;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    display: none;
+    z-index: 1;
+}
+
+.mobile-navigation li{
+    margin: 0;
+    z-index: 1;
+}
+
+.mobile-navigation a:link{
+    text-decoration: none;
+}
+
+.mobile-navigation a:hover{
+    color: #ffdf01;
+}
+
+
+.header.open .mobile-navigation{
+    display: flex;
+    position: absolute;
+    background: #000000;
+}
+
 body{
     background-color: white;
     font-size: 0.95em;
@@ -132,5 +222,12 @@ iframe:hover{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .mobile-menu{
+        opacity: 1;
+        display: block;
     }
 }

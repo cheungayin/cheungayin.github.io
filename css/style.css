@@ -65,26 +65,112 @@
 body{
     background-color: white;
     font-size: 0.95em;
-    font-family: "DinamoABCWhyte-Regular";
+    font-family: "DinamoABCWhyte-Regular", sans-serif;
     margin: 0.95em;
     color: #000000;
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>☝️</text></svg>") 16 0, auto;
 }
 
+.header{
+    margin-top: -0.95em;
+    width: 97vw;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+}
+
+.main-title{
+    font-weight: bolder;
+    text-align: left;
+}
+
+.main-title a:link{
+    text-decoration: none;
+}
+
+.main-title a:hover{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🏠</text></svg>") 16 0, auto;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-right: -0.9em;
+    list-style-type: none;
+    padding: 0;
+    column-gap: 2em;
+    right: 0;
+}
+
+.mobile-menu{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    margin-right: 1em;
+}
+
+.mobile-navigation{
+    background: #000000;
+    margin-top: -0.95em;
+    margin-left: -0.95em;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    display: none;
+    z-index: 1;
+    list-style-type: none;
+}
+
+.mobile-navigation li{
+    margin-top: 0;
+    z-index: 1;
+
+}
+
+.mobile-navigation a:link{
+    text-decoration: none;
+}
+
+.mobile-navigation a:hover{
+    color: #ffdf01;
+}
+
+
+.header.open .mobile-navigation{
+    display: flex;
+    position: absolute;
+    background: #000000;
+}
+
 h1{
-    font-family: "DinamoABCWhyte-Bold";
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
     font-size: 0.95em;
     font-weight: bolder;
 }
 
 h2{
-    font-family: "DinamoABCWhyte-Bold";
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
     font-size: 0.95em;
     font-weight: bold;
 }
 
 h3{
-    font-family: "DinamoABCWhyte-Bold";
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
     font-size: 0.95em;
     font-weight: bold;
 }
@@ -99,7 +185,7 @@ div{
     margin-bottom: 1rem;
 }
 
-.menu{
+/* .menu{
     display: inline-block;
     display: flex;
     justify-content: space-between;
@@ -121,7 +207,7 @@ div{
     text-decoration: wavy underline;
     color: lime;
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
-}
+} */
 
 a:link{
     text-decoration: underline;
@@ -137,7 +223,7 @@ a:hover{
     color:#1b0fd7;
     text-decoration: dotted underline;
     /* font-family: "DinamoABCWhyte-Heavy"; */
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='75' height='90' style='fill:black;font-size:45px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
 }
   
 a:active{
@@ -156,11 +242,11 @@ a:active{
 }
 
 .box p{
-    font-family: "DinamoABCWhyte-Light";
+    font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
 .box ul{
-    font-family: "DinamoABCWhyte-Light";
+    font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
 #aboutme{
@@ -201,6 +287,14 @@ a:active{
     margin-right: 1rem;
 }
 
+.onecolumn{
+    margin: 1em;
+}
+.onecolumn img{
+    margin-bottom: 1.5em;
+    width: 90%;
+}
+
 /* .flex-container{
     display: flex;
     flex-flow: row wrap;
@@ -238,6 +332,13 @@ a:active{
 
 /* styles for screens smaller than 800px wide */
 @media screen and (max-width: 800px){
+    .navigation{
+        display: none;
+    }
+    .mobile-menu{
+        opacity: 1;
+        display: block;
+    }
     .things{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
