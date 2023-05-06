@@ -1,0 +1,218 @@
+/* circular font */
+
+@font-face{
+  font-family: "circular-bold";
+  src:url("./fonts/circular-bold.woff") format("woff");
+  src:url("./fonts/circular-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+  font-family: "circular-bolditalic";
+  src:url("./fonts/circular-boldItalic.woff") format("woff");
+  src:url("./fonts/circular-boldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face{
+  font-family: "circular-regular";
+  src:url("./fonts/circular-regular.woff") format("woff");
+  src:url("./fonts/circular-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "circular-italic";
+  src:url("./fonts/circular-italic.woff2") format("woff");
+  src:url("./fonts/circular-iItalic.woff") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* tt commons classic font */
+@font-face{
+  font-family: "ttcommonsclassic_bold";
+  src:url("./fonts/ttcommonsclassic_bold.woff") format("woff");
+  src:url("./fonts/ttcommonsclassic_bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+  font-family: "ttcommonsclassic_bolditalic";
+  src:url("./fonts//ttcommonsclassic_bolditalic.woff") format("woff");
+  src:url("./fonts/ttcommonsclassic_bolditalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face{
+  font-family: "ttcommonsclassic_italic";
+  src:url("./fonts/ttcommonsclassic_italic.woff") format("woff");
+  src:url("./fonts/ttcommonsclassic_italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face{
+  font-family: "ttcommonsclassic_regular";
+  src:url("./fonts/ttcommonsclassic_regular.woff") format("woff");
+  src:url("./fonts/ttcommonsclassic_regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html, body{
+  font-family: "ttcommonsclassic_regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🛞</text></svg>") 16 0, auto; */
+  line-height: 1rem;
+}
+
+canvas{
+  display: block;
+}
+
+.header{
+  font-family: "ttcommonsclassic_bold", sans-serif;
+  font-weight: bold;
+  width: 100vw;
+  /* padding-left: 1em;
+  padding-right: 1em; */
+  height: 7.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+}
+
+.header a{
+  text-decoration: underline;
+  color: #000000;
+}
+
+.header a:hover{
+  color: #ff4500;
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🛞</text></svg>") 16 0, auto;
+}
+
+.header a:visited{
+  color: relative;
+}
+
+.main-title{
+  text-align: left;
+  font-size: 1.5rem;
+  padding-left: 1em;
+}
+
+.navigation{
+  font-size: 1.5rem;
+  flex-direction: row;
+  text-align: right;
+  right: 0;
+  padding-right: 1em;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+h1{
+  font-family: "ttcommonsclassic_italic", sans-serif;
+  font-style: italic;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  color: #0000ff;
+}
+
+.about{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.about div{
+  margin-bottom: 3em;
+}
+
+marquee{
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+audio{
+  display: none;
+}
+
+button{
+  background-color: none;
+  border: none;
+  border-radius: 2em;
+  font-size: 1.75rem;
+  padding: 0.4em;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
+button:hover{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>👆</text></svg>") 16 0, auto;
+}
+
+.footer{
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+  bottom: 0;
+  position: fixed;
+  margin-right: 2em;
+}
+
+.busdata-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.25em;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding: 1.5em;
+  align-content: left;
+  font-size: 0.75rem;
+}
+
+.busdata-grid div{
+  border: solid 1px black;
+  border-radius: 1em;
+  padding-left: 0.75em;
+  padding-bottom: 2em;
+  padding-right: 0.75em;
+}
+
+h2{
+  font-family: "ttcommonsclassic_bold", sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-bottom: 1.5em;
+  color: #000000;
+  margin-bottom: -0.75em;
+}
+
+.busdata-grid p{
+  margin-bottom: -1.25em;
+}
+
+
+@media screen and (max-width: 768px){
+  .busdata-grid{
+    grid-template-columns: repeat(1, 1fr);
+    width: 40vw;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .busdata-grid{
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
