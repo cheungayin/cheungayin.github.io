@@ -32,7 +32,8 @@ let itemNum = 100;
 let w, h;
 let numPerRow = 3;
 let numPerCol = 50;
-let speed = 0.0001;
+
+
 // let speed = [];
 let angle = 0;
 
@@ -47,10 +48,6 @@ function setup() {
 
   w = width;
   h = height;
-  //console.log(data);
-  //console.log(data[0].Reason);
-
-  // loop();
 
   cnv.id('mycanvas');
 
@@ -95,7 +92,7 @@ function draw() {
       } else if (reason === "Won’t Start") {
         reasonNum = 31;
       }
-      //console.log(reasonNum)
+
       // map the reason number to a range of circle sizes
       let s = map(reasonNum, 0, 100, 0, yInterval - 40);
 
@@ -107,14 +104,22 @@ function draw() {
       strokeWeight(1.25);
       stroke(000);
       noFill();
-
+      // let speed = 0.002;
+      // let delay = data[index].How_Long_Delayed;
+  
+      // if(delay === "0-15 Min"){
+      //    speed = 0.0001;
+      // } else if (delay === "16-30 Min"){
+      //     speed = 0.00005;
+      // } else if (delay === "31-45 Min"){
+      //     speed = 0.00001;
+      // } else if (delay === "46-60 Min"){
+      //     speed = 0.0001;
+      // } else if (delay === "61-90 Min"){
+      //     speed = 0.00005;
+      // } 
+      
       circle(x, y, s);
-
-      //circle orbiting around
-      let dist = s / 2;
-      //rules for orbiting circle
-      let orbitX = x + dist * cos(angle);
-      let orbitY = y + dist * sin(angle);
 
       /*
       let speed = data[index].How_Long_Delayed;
@@ -131,46 +136,23 @@ function draw() {
         spinSpeed = 0.00005;
       }
       */
-
+    
+      let speedArray = [.0001, .00005, .0001, .00005];
+      let spinSpeed = .0001;
+      
       if (mouseIsPressed == true) {
-        angle -= speed;
+        angle -= spinSpeed;
       } else {
-        angle += speed;
+        angle += spinSpeed;
       }
 
-      //angle += speed;
+       //circle orbiting around
+       let dist = s / 2;
+    
+      //rules for orbiting circle
+       let orbitX = x + dist * cos(angle);
+       let orbitY = y + dist * sin(angle);
 
-      //assigning different colors for the different types of school bus run
-      /*
-      if (data[index].Run_Type === "Special Ed AM Run"){
-        fill("#ff4e05")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "General Ed AM Run"){
-        fill("#ff0539")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "Special Ed PM Run"){
-        fill("#4e05ff")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "General Ed PM Run"){
-        fill("#05b6ff")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "Special Ed Field Trip"){
-        fill("#00b100")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "General Ed Field Trip"){
-        fill("#006400")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      if (data[index].Run_Type === "Pre-K/EI"){
-        fill("#ff05b6")
-        ellipse(orbitX, orbitY, s/5, s/5);
-      }
-      */
 
       fill("white");
       ellipse(orbitX, orbitY, s / 5, s / 5);
@@ -196,8 +178,8 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight * 9);
   if (windowWidth < 768) {
-    numPerRow = 1;
-    numPerCol = 150;
+    numPerRow = 2;
+    numPerCol = 75;
     // let s = map(reasonNum, 0, 100, 0, yInterval - 20);
   } else if (windowWidth > 1024) {
     numPerRow = 5;
