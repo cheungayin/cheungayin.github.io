@@ -28,10 +28,9 @@
 
     <div class="about">
       <div>
-        <h1>about this project</h1>
+        <h1>about this project &#128655;</h1>
         <p>
-          the wheels on the bus goes round &#128652; is a project that displays the data of school bus delays in New York City. Utilizing the data provided by Department of Education on the NYC Open Data website and p5.js, this website visualizes selected information in a more engaging way, making the experiecne of looking through this data more &#10024;.
-          <br><br>
+          The <i>wheels on the bus goes round &#128652;</i> is a project that displays the data of school bus delays in New York City. Utilizing the data provided by Department of Education on the NYC Open Data website and p5.js, this website visualizes selected information in a more engaging way, making the experience of looking at this data more &#10024;&#10024;.
         </p>
       </div>
 
@@ -45,15 +44,33 @@
         </p>
       </div>
 
-      <div>
-        <h1>how to navigate &#128652; &#128640; &#128641; &#128647; &#128661; &#128663; &#128665; &#128667; &#128674;</h1>
+      <div id="span2col">
+        <h1>how to navigate</h1>
         <p>
-          talk about how i want the user to interact with my website&#8263; what does each part of this project mean&#8263;
+          &#128652; &#128640; &#128641; &#128647; &#128661; &#128663; &#128665; &#128667; &#128674;
           <br><br>
+          This project was mainly inspired by the nursery song "Wheels on the Bus". To visualize the data, p5.js was used to draw circles that are spinning clockwise, imitating the wheels on a school bus. 
+          <br><br>
+          The size of the circles are generated according to the reasons for delay/breakdown, so depending on how likely school buses delay/breakdown for a particular reason, the size of each circle changes. If bus is represented by a dot, it indicates that the bus had broken down.
           <ul>
-            <li>the circles on the screen are generated according to the reasons for delay/breakdown, so depending on how often buses are delay/breakdown, the size of each circle will change.</li>
-            <li>when the user hovers over the circle, it will stop spinning&#8263;&#8263;&#8263; - need to see if this can be executed on p5.js</li>
+            <li>Accident: 5105/576147 = 0.886%</li>
+            <li>Delayed by School: 4084/576147 = 0.709%</li>
+            <li>Flat Tire: 13948/576147 = 2.421%</li>
+            <li>Heavy Traffic: 361075/576147 = 62.671%</li>
+            <li>Late return from Field Trip: 8425/576147 = 1.467%</li>
+            <li>Mechanical Problem: 54080/576147 = 9.386%</li>
+            <li>Other: 86710/576147 = 15.050%</li>
+            <li>Problem Run: 13308/576147 = 1.310%</li>
+            <li>Weather Conditions: 10988/576147 = 1.907%</li>
+            <li>Won’t Start: 18422/576147 = 3.197%</li>
           </ul>
+          When the user presses and hold the mouse/trackpad, the circles will spin in the opposite direction (counterclockwise). This portray the delay of a school bus as it spins backwards.
+          <br><br>
+          The speed of the spinning circles are determined by how loing each bus was delayed for. If the circle does not spin, it indicates that the bus had broken down.
+          <br><br>
+          To view the metatdata of each bus delay/breakdown, click on the button "see metadata" to look at the details of each bus delay/breakdown that was logged into the system and updated on the NYC Open Data page.
+          <br><br>
+          The buttons at the bottom right of the screen are to play/pause, and mute/unmute the audio that is embedded into this website. Since the data visualization was inspired by the nursery song, it was added to the website to create an experience for the users. 
         </p>
       </div>
       

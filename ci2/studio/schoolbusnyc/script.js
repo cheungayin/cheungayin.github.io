@@ -25,6 +25,17 @@ function toggleAudio(){
   isPlaying = !isPlaying;
 }
 
+/* 
+function seeData() {
+  var showcircles = document.getElementById("showcircles");
+  if (showcircles.style.display === "none") {
+    showcircles.style.display = "block";
+  } else {
+    showcircles.style.display = "none";
+  }
+}
+*/
+
 
 fetch('./jsondata/schoolbusdata-may2-may3.json')
 .then(response => response.json())

@@ -95,7 +95,7 @@ canvas{
 
 .header a:hover{
   color: #ff4500;
-  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🛞</text></svg>") 16 0, auto;
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
 }
 
 .header a:visited{
@@ -118,6 +118,15 @@ canvas{
 
 a:link{
   text-decoration: none;
+}
+
+a:hover{
+  color: #ff4500;
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
+}
+
+a:visited{
+  color: inherit;
 }
 
 h1{
@@ -160,6 +169,11 @@ button:hover{
   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>👆</text></svg>") 16 0, auto;
 }
 
+#mycanvas{
+  margin-top: -1em;
+  display: block;
+}
+
 .footer{
   width: 100vw;
   display: flex;
@@ -169,37 +183,84 @@ button:hover{
   margin-right: 2em;
 }
 
+.seedata-btn{
+  display: block;
+  position: fixed;
+  top: 10vh;
+  right: 4vw;
+  z-index: 999;
+}
+
+/* #busdata{
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  display: none;;
+  z-index: 1;
+
+} */
+
+.seedata.open .busdata-grid{
+  /* display: flex; */
+  position:fixed;
+}
+
+
 .busdata-grid{
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1.5em;
-  grid-row-gap: 1.25em;
-  margin-left: 5em;
-  margin-right: 5em;
+  grid-row-gap: 1em;
+  margin-left: 6em;
+  margin-right: 6em;
   padding: 1.5em;
   align-content: left;
   font-size: 0.75rem;
+  /* z-index: 0; */
 }
 
 .busdata-grid div{
   border: solid 1px black;
   border-radius: 1em;
   padding-left: 0.75em;
-  padding-bottom: 2em;
+  padding-bottom: 1.75em;
   padding-right: 0.75em;
 }
 
 h2{
   font-family: "ttcommonsclassic_bold", sans-serif;
   font-weight: bold;
-  font-size: 0.75rem;
-  margin-bottom: 1.5em;
+  font-size: 0.7rem;
   color: #000000;
-  margin-bottom: -0.75em;
+  margin-bottom: -0.7em;
 }
 
 .busdata-grid p{
   margin-bottom: -1.25em;
+}
+
+.about{
+  display: grid;
+  grid-column: 1;
+}
+
+.about div{
+  padding: 1em;
+}
+
+#span2col{
+  grid-column: 1 / span 2;
+}
+
+
+::-moz-selection{
+  background: #000000;
+  color: #ffffff;
+}
+
+::selection{
+  background: #000000;
+  color: #ffffff;
 }
 
 
@@ -209,10 +270,23 @@ h2{
     width: 40vw;
     margin: auto;
   }
+  .about{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #span2col{
+    grid-column: 1;
+  }
 }
 
 @media screen and (min-width: 1024px){
   .busdata-grid{
     grid-template-columns: repeat(5, 1fr);
+  }
+  .about{
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: auto;
+  }
+  #span2col{
+    grid-column: auto;
   }
 }

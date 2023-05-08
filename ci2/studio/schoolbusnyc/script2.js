@@ -1,15 +1,34 @@
-function seeData() {
-  var metadata = document.getElementById("showcircles");
-  if (metadata.style.display === "none") {
-    metadata.style.display = "block";
-  } else {
-    metadata.style.display = "none";
-  }
+//to mute/unmute audio with button > reference https://www.w3schools.com/tags/av_prop_muted.asp
+
+var audio = document.getElementById("audio");
+
+function enableMute() { 
+  audio.muted = true;
+} 
+
+function disableMute() { 
+  audio.muted = false;
 }
 
 
+//to play/pause audio with button > referecne https://www.w3schools.com/tags/av_met_pause.asp
+
+var audio = document.getElementById("audio"); 
+var isPlaying = false;
+
+function toggleAudio(){
+  if (isPlaying){
+    audio.pause();
+  } else{
+    audio.play();
+  }
+  isPlaying = !isPlaying;
+}
+
+// p5.js sketch :) drawing the spinning circles to visualize the data
+
 let data, url;
-// let itemNum = 100;
+let itemNum = 100;
 let w, h;
 let numPerRow = 3;
 let numPerCol = 50;
@@ -24,14 +43,17 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight * 9);
+  let cnv = createCanvas(windowWidth, windowHeight * 9);
 
   w = width;
   h = height;
   //console.log(data);
   //console.log(data[0].Reason);
 
-  loop();
+  // loop();
+
+  cnv.id('mycanvas');
+
 }
 
 function draw() {
@@ -160,13 +182,15 @@ function draw() {
 }
 
 //pressing shift key to hide these spinning circles
-function keyPressed() {
-  if (keyCode === SHIFT) {
-    noLoop();
-  } else {
-    loop();
-  }
-}
+// function keyPressed() {
+//   if (keyCode === SHIFT) {
+//     noLoop();
+//   } else {
+//     loop();
+//   }
+// }
+
+
 
 // making it responsive when resizing the window
 function windowResized() {
@@ -180,3 +204,68 @@ function windowResized() {
     numPerCol = 30;
   }
 }
+
+
+
+fetch('./jsondata/schoolbusdata-may2-may3.json')
+.then(response => response.json())
+.then(data => {
+    // access div element
+    const busdata = document.getElementById('busdata');
+            
+    // loop through  data and add each item to div
+    data.forEach(item => {
+    const div = document.createElement('div');
+    const h2 = document.createElement('h2');
+    const p = document.createElement('p');
+    const p1 = document.createElement('p');
+    const p2 = document.createElement('p');
+    const p3 = document.createElement('p');
+    const p4 = document.createElement('p');
+    const p5 = document.createElement('p');
+    const btn = document.createElement('button');
+
+    // setting text content
+    h2.textContent = item.Reason;
+    p.textContent = '#' + item.Busbreakdown_ID;
+    p1.textContent = 'bus no. ' + item.Bus_No + '  route no. ' + item.Route_Number;
+    // p2.textContent = 'route no. ' + item.Route_Number;
+    p3.textContent = item.Occurred_On;
+    p4.textContent = 'bus ran by ' + item.Bus_Company_Name;
+    p5.textContent = 'delayed for ' + item.How_Long_Delayed;
+    btn.textContent = 'see data';
+
+    // add the HTML tags to webpage
+    div.appendChild(h2);
+    div.appendChild(p);
+    div.appendChild(p1);
+    // div.appendChild(p2);
+    div.appendChild(p3);
+    div.appendChild(p4);
+    div.appendChild(p5);
+    busdata.appendChild(div);
+
+    });
+})
+.catch(error => console.error(error));
+
+
+let toggleData = document.querySelector(".seedata-btn");
+let dataStatus = document.querySelector(".seedata");
+// let mycanvas = document.querySelector("#mycanvas");
+// mycanvas.style.display = "none";
+// when user clicks on "see metadata", open and close the metadata
+toggleData.addEventListener( "click", () => {
+    if (dataStatus.classList.contains("open")){
+      dataStatus.classList.remove("open");
+      busdata.style.display = "none";
+      mycanvas.style.display = "block";
+    }
+    else{
+      dataStatus.classList.add("open");
+      busdata.style.display = "grid";
+      mycanvas.style.display = "none";
+    }
+},
+false,
+);
