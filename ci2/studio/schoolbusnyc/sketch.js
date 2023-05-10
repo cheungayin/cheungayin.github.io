@@ -160,13 +160,13 @@ function draw() {
 }
 
 //pressing shift key to hide these spinning circles
-function keyPressed() {
-  if (keyCode === SHIFT) {
-    noLoop();
-  } else {
-    loop();
-  }
-}
+// function keyPressed() {
+//   if (keyCode === SHIFT) {
+//     noLoop();
+//   } else {
+//     loop();
+//   }
+// }
 
 // making it responsive when resizing the window
 function windowResized() {

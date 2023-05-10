@@ -10,7 +10,6 @@ function disableMute() {
   audio.muted = false;
 }
 
-
 //to play/pause audio with button > referecne https://www.w3schools.com/tags/av_met_pause.asp
 
 var audio = document.getElementById("audio"); 
@@ -25,17 +24,23 @@ function toggleAudio(){
   isPlaying = !isPlaying;
 }
 
-// p5.js sketch :) drawing the spinning circles to visualize the data
+// p5.js sketch :) drawing the spinning circles to visualize the data (circles spinning at different speed) on p5.js: https://editor.p5js.org/cheungayin/sketches/vyxaEjbaP
 
 let data, url;
-let itemNum = 100;
+let itemNum = 150;
+
+let orbitX;
+let orbitY;
+let orbitRadius = [];
+let circleRadius = 7.5;
+let angle = 0;
+let orbitSpeed = [];
+let orbitCircleList = [];
+
 let w, h;
+
 let numPerRow = 3;
 let numPerCol = 50;
-
-
-// let speed = [];
-let angle = 0;
 
 function preload() {
   // load data from NYC Open Data API
@@ -43,151 +48,194 @@ function preload() {
   data = loadJSON(url);
 }
 
+let rowPos = 1;
+let columnPos = 1;
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight * 9);
+  cnv.id("mycanvas");
 
-  w = width;
-  h = height;
+  formattedData = Object.values(data);
+  // console.log(formattedData);
 
-  cnv.id('mycanvas');
+  for (let i = 0; i < formattedData.length; i++) {
+    let reason = formattedData[i].Reason;
+    // console.log(reason);
+    // console.log(formattedData[i].Reason);
 
+    // orbitRadius = 1;
+    if (reason === "Accident") {
+      orbitRadius = 8;
+    } else if (reason === "Delayed by School") {
+      orbitRadius = 7;
+    } else if (reason === "Flat Tire") {
+      orbitRadius = 24;
+    } else if (reason === "Heavy Traffic") {
+      orbitRadius = 100;
+    } else if (reason === "Late return from Field Trip") {
+      orbitRadius = 14;
+    } else if (reason === "Mechanical Problem") {
+      orbitRadius = 46;
+    } else if (reason === "Other") {
+      orbitRadius = 65;
+    } else if (reason === "Problem Run") {
+      orbitRadius = 13;
+    } else if (reason === "Weather Conditions") {
+      orbitRadius = 19;
+    } else if (reason === "Won’t Start") {
+      orbitRadius = 31;
+    } else {
+      orbitRadius = 1;
+    }
+
+    // console.log(orbitRadius);
+
+    let delayed = formattedData[i].How_Long_Delayed;
+    // console.log(delayed);
+
+    if (delayed === "0-15 Min") {
+      orbitSpeed = 0.015;
+    } else if (delayed === "16-30 Min") {
+      orbitSpeed = 0.0095;
+    } else if (delayed === "31-45 Min") {
+      orbitSpeed = 0.008;
+    } else if (delayed === "46-60 Min") {
+      orbitSpeed = 0.0065;
+    } else if (delayed === "61-90 Min") {
+      orbitSpeed = 0.005;
+    } else {
+      orbitSpeed = 0;
+    }
+
+    w = width;
+    h = height;
+
+    let xInterval = w / (numPerRow + 1);
+    let yInterval = h / (numPerCol + 1);
+
+    if (rowPos === numPerRow + 1) {
+      rowPos = 1;
+      columnPos++;
+    }
+    if (columnPos === numPerCol + 1) {
+      columnPos = 1;
+    }
+
+    orbitX = xInterval * rowPos;
+    orbitY = yInterval * columnPos;
+
+    rowPos++;
+
+    let sunColor = random(0, 255); //random color
+
+    let sunRadius = formattedData[i].Reason;
+    // console.log(reason);
+    // console.log(formattedData[i].Reason);
+
+    // sunRadius = 1;
+    if (reason === "Accident") {
+      sunRadius = 8;
+    } else if (reason === "Delayed by School") {
+      sunRadius = 7;
+    } else if (reason === "Flat Tire") {
+      sunRadius = 24;
+    } else if (reason === "Heavy Traffic") {
+      sunRadius = 100;
+    } else if (reason === "Late return from Field Trip") {
+      sunRadius = 14;
+    } else if (reason === "Mechanical Problem") {
+      sunRadius = 46;
+    } else if (reason === "Other") {
+      sunRadius = 65;
+    } else if (reason === "Problem Run") {
+      sunRadius = 13;
+    } else if (reason === "Weather Conditions") {
+      sunRadius = 19;
+    } else if (reason === "Won’t Start") {
+      sunRadius = 31;
+    } else {
+      sunRadius = 1;
+    }
+
+    // console.log(sunRadius);
+
+    let currentOrbCircle = new OrbitingCircle(
+      orbitX,
+      orbitY,
+      orbitRadius / 2,
+      circleRadius,
+      angle,
+      orbitSpeed,
+      sunColor,
+      sunRadius
+    );
+
+    orbitCircleList.push(currentOrbCircle);
+  }
+
+  // circle(0, 0, 100);
 }
 
 function draw() {
-  background("#ffc021");
-  //background('#ff4d05');
+  background('#ffc021');
 
-  let k = 0;
+  orbitCircleList.forEach((system) => {
+    system.display();
+  });
+}
 
-  let xInterval = w / (numPerRow + 1);
-  let yInterval = h / (numPerCol + 1);
+class OrbitingCircle {
+  constructor(x, y, ro, rc, a, s, sc, sr) {
+    this.x = x; // x coordinate for the orbit
+    this.y = y; // y coordinate for the orbit
+    this.ro = ro; // radius of orbit
+    this.rc = rc; // radius of circle
+    this.a = a; // angle
+    this.s = s; // speed
+    this.sc = sc; // sun color
+    this.sr = sr; // sun radius
+  }
 
-  // loop through the data and draw circles for each reason
-  let index = 0;
-  for (let j = 0; j < numPerRow; j++) {
-    for (let i = 0; i < numPerCol; i++) {
-      let reason = data[index].Reason;
+  display() {
+    strokeWeight(1);
+    noFill(this.sc, 0, 0);
+    ellipse(this.x, this.y, this.sr);
+    fill("white");
+    // draw the orbiting circle
+    ellipse(
+      this.x + this.ro * cos(this.a),
+      this.y + this.ro * sin(this.a),
+      this.rc * 2,
+      this.rc * 2
+    );
+    // change 40 into sr instead so size changes
 
-      // assign a nuber for each reason
-      // default reasonNum to 0 if reason is undefined
-      let reasonNum = 1;
-      if (reason === "Accident") {
-        reasonNum = 8;
-      } else if (reason === "Delayed by School") {
-        reasonNum = 7;
-      } else if (reason === "Flat Tire") {
-        reasonNum = 24;
-      } else if (reason === "Heavy Traffic") {
-        reasonNum = 100;
-      } else if (reason === "Late return from Field Trip") {
-        reasonNum = 14;
-      } else if (reason === "Mechanical Problem") {
-        reasonNum = 46;
-      } else if (reason === "Other") {
-        reasonNum = 65;
-      } else if (reason === "Problem Run") {
-        reasonNum = 13;
-      } else if (reason === "Weather Conditions") {
-        reasonNum = 19;
-      } else if (reason === "Won’t Start") {
-        reasonNum = 31;
-      }
+    // update angles to create rotating effects
 
-      // map the reason number to a range of circle sizes
-      let s = map(reasonNum, 0, 100, 0, yInterval - 40);
-
-      // calculate the position of the circle based on its index
-      let x = ((j % numPerRow) + 1) * xInterval;
-      let y = ((i % numPerCol) + 1) * yInterval;
-
-      // draw circle
-      strokeWeight(1.25);
-      stroke(000);
-      noFill();
-      // let speed = 0.002;
-      // let delay = data[index].How_Long_Delayed;
-  
-      // if(delay === "0-15 Min"){
-      //    speed = 0.0001;
-      // } else if (delay === "16-30 Min"){
-      //     speed = 0.00005;
-      // } else if (delay === "31-45 Min"){
-      //     speed = 0.00001;
-      // } else if (delay === "46-60 Min"){
-      //     speed = 0.0001;
-      // } else if (delay === "61-90 Min"){
-      //     speed = 0.00005;
-      // } 
-      
-      circle(x, y, s);
-
-      /*
-      let speed = data[index].How_Long_Delayed;
-      let spinSpeed = 0; 
-      if (speed === "0-15 Min"){
-        spinSpeed = 0.0001;
-      } else if (speed === "16-30 Min"){
-        spinSpeed = 0.00005;
-      } else if (speed === "31-45 Min"){
-        spinSpeed = 0.00001;
-      } else if (speed === "46-60 Min"){
-        spinSpeed = 0.0001;
-      } else if (speed === "61-90 Min"){
-        spinSpeed = 0.00005;
-      }
-      */
-    
-      let speedArray = [.0001, .00005, .0001, .00005];
-      let spinSpeed = .0001;
-      
-      if (mouseIsPressed == true) {
-        angle -= spinSpeed;
-      } else {
-        angle += spinSpeed;
-      }
-
-       //circle orbiting around
-       let dist = s / 2;
-    
-      //rules for orbiting circle
-       let orbitX = x + dist * cos(angle);
-       let orbitY = y + dist * sin(angle);
-
-
-      fill("white");
-      ellipse(orbitX, orbitY, s / 5, s / 5);
-
-      k++;
-      index++;
+    if (mouseIsPressed == true) {
+      this.a -= this.s;
+    } else {
+      this.a += this.s;
     }
   }
 }
 
-//pressing shift key to hide these spinning circles
-// function keyPressed() {
-//   if (keyCode === SHIFT) {
-//     noLoop();
-//   } else {
-//     loop();
-//   }
-// }
-
-
-
 // making it responsive when resizing the window
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight * 9);
   if (windowWidth < 768) {
     numPerRow = 2;
     numPerCol = 75;
-    // let s = map(reasonNum, 0, 100, 0, yInterval - 20);
   } else if (windowWidth > 1024) {
     numPerRow = 5;
     numPerCol = 30;
+  } else {
+    numPerRow = 3;
+    numPerCol = 50;
   }
 }
 
-
+//busdata grid to show metadata
 
 fetch('./jsondata/schoolbusdata-may2-may3.json')
 .then(response => response.json())
