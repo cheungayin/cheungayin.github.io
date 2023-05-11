@@ -272,9 +272,10 @@ h2{
 
 @media screen and (max-width: 768px){
   .busdata-grid{
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     margin-left: 2em;
     margin-right: 2em;
+    font-size: 0.65rem;
   }
   .about{
     grid-template-columns: repeat(1, 1fr);
@@ -286,28 +287,28 @@ h2{
 
 @media screen and (min-width: 1024px){
   .busdata-grid{
-    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1.75em;
-    grid-row-gap: 2em;
-    /* margin-left: 6em;
-    margin-right: 6em; */
-    align-content: left;
-    font-size: 0.9rem;
+    grid-row-gap: 2em; */
+    margin-top: 2em;
+    margin-left: 8em;
+    margin-right: 8em;
+    font-size: 0.8rem;
   }
   h2{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .busdata-grid p{
-    margin-bottom: -0.75em;
+    margin-bottom: -1em;
   }
-  .busdata-grid div{
+  /* .busdata-grid div{
     padding-left: 1em;
     padding-bottom: 1.9em;
     padding-right: 1em;
-  }
-  #mycanvas{
+  } */
+  /* #mycanvas{
     margin-top: -3.5em;
-  }
+  } */
   .about{
       grid-template-columns: repeat(2, 1fr);
       grid-column: auto;
