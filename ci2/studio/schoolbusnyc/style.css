@@ -277,6 +277,13 @@ h2{
     margin-right: 2em;
     font-size: 0.65rem;
   }
+  h2{
+    font-size: 0.65rem;
+    margin-bottom: -0.95em;
+  }
+  .busdata-grid p{
+    margin-bottom: -1.4em;
+  }
   .about{
     grid-template-columns: repeat(1, 1fr);
   }
