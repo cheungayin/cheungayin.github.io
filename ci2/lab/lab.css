@@ -22,14 +22,13 @@
     font-style:normal;
 }
 
-ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-li{
-    margin-right: 1.5rem;
+body{
+    background-color: white;
+    font-size: 0.95em;
+    font-family: "DinamoABCWhyte-Regular", sans-serif;
+    margin: 0.95em;
+    color: #000000;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>☝️</text></svg>") 16 0, auto;
 }
 
 .header{
@@ -62,7 +61,11 @@ li{
     display: flex;
     flex-direction: row;
     text-align: right;
-    margin-right: -1.9em;
+    margin-right: -0.9em;
+    list-style-type: none;
+    padding: 0;
+    column-gap: 2em;
+    right: 0;
 }
 
 .mobile-menu{
@@ -90,10 +93,11 @@ li{
     color: #ffffff;
     display: none;
     z-index: 1;
+    list-style-type: none;
 }
 
 .mobile-navigation li{
-    margin: 0;
+    margin-top: 0;
     z-index: 1;
 }
 
@@ -105,21 +109,12 @@ li{
     color: #ffdf01;
 }
 
-
 .header.open .mobile-navigation{
     display: flex;
     position: absolute;
     background: #000000;
 }
 
-body{
-    background-color: white;
-    font-size: 0.95em;
-    font-family: "DinamoABCWhyte-Regular";
-    margin: 0.95em;
-    color: #000000;
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>☝️</text></svg>") 16 0, auto;
-}
 
 h1{
     font-family: "DinamoABCWhyte-Bold";
@@ -140,7 +135,8 @@ h3{
 }
 
 img{
-    max-width: 25vh;
+    max-width: 100%;
+    height: auto;
 }
 
 div{
@@ -148,7 +144,7 @@ div{
     margin-bottom: 1rem;
 }
 
-.menu{
+/* .menu{
     display: inline-block;
     display: flex;
     justify-content: space-between;
@@ -168,7 +164,7 @@ div{
     text-decoration: wavy underline ;
     color: lime;
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
-}
+} */
 
 a:link{
     text-decoration: underline ;
