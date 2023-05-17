@@ -1,30 +1,70 @@
 @font-face{
     font-family: "DinamoABCWhyte-Light";
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff") format("woff");
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff2") format("woff2");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Light-Trial.woff2") format("woff2");
     font-weight:light;
     font-style:normal;
 }
 
 @font-face{
+    font-family: "DinamoABCWhyte-LightItalic";
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-LightItalic-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-LightItalic-Trial.woff2") format("woff2");
+    font-weight:light;
+    font-style:italic;
+}
+
+@font-face{
     font-family: "DinamoABCWhyte-Regular";
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff") format("woff");
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff2") format("woff2");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Regular-Trial.woff2") format("woff2");
     font-weight:normal;
     font-style:normal;
 }
 
 @font-face{
+    font-family: "DinamoABCWhyte-RegularItalic";
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-RegularItalic-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-RegularItalic-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:italic;
+}
+
+@font-face{
     font-family: "DinamoABCWhyte-Bold";
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff") format("woff");
-    src:url("../lab/fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff2") format("woff2");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Bold-Trial.woff2") format("woff2");
     font-weight:bold;
     font-style:normal;
 }
 
+@font-face{
+    font-family: "DinamoABCWhyte-BoldItalic";
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-BoldItalic-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-BoldItalic-Trial.woff2") format("woff2");
+    font-weight:bold;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-Heavy";
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Heavy-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-Heavy-Trial.woff2") format("woff2");
+    font-weight:heavy;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "DinamoABCWhyte-HeavyItalic";
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-HeavyItalic-Trial.woff") format("woff");
+    src:url("./fonts/DinamoABCWhyte/ABCWhyte-HeavyItalic-Trial.woff2") format("woff2");
+    font-weight:heavy;
+    font-style:italic;
+}
+
 body{
     background-color: white;
-    font-size: 0.95em;
+    font-size: 1em;
     font-family: "DinamoABCWhyte-Regular", sans-serif;
     margin: 0.95em;
     color: #000000;
@@ -61,7 +101,6 @@ body{
     display: flex;
     flex-direction: row;
     text-align: right;
-    margin-right: -0.9em;
     list-style-type: none;
     padding: 0;
     column-gap: 2em;
@@ -109,33 +148,33 @@ body{
     color: #ffdf01;
 }
 
+
 .header.open .mobile-navigation{
     display: flex;
     position: absolute;
     background: #000000;
 }
 
-
 h1{
-    font-family: "DinamoABCWhyte-Bold";
-    font-size: 0.95em;
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
+    font-size: 1em;
     font-weight: bolder;
 }
 
 h2{
-    font-family: "DinamoABCWhyte-Bold";
-    font-size: 0.95em;
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
+    font-size: 1em;
     font-weight: bold;
 }
 
 h3{
-    font-family: "DinamoABCWhyte-Bold";
-    font-size: 0.95em;
-    font-weight: normal;
+    font-family: "DinamoABCWhyte-Bold", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -144,30 +183,8 @@ div{
     margin-bottom: 1rem;
 }
 
-/* .menu{
-    display: inline-block;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.menu a:link{
-    text-decoration: wavy underline ;
-    color: inherit;
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
-}
-
-.menu a:hover{
-    text-decoration: wavy underline ;
-    color: lime;
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🪩</text></svg>") 16 0, auto;
-} */
-
 a:link{
-    text-decoration: underline ;
+    text-decoration: underline;
     color: inherit;
 }
 
@@ -180,7 +197,7 @@ a:hover{
     color:#1b0fd7;
     text-decoration: dotted underline;
     /* font-family: "DinamoABCWhyte-Heavy"; */
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='75' height='90' style='fill:black;font-size:45px;'><text y='50%'>🔗</text></svg>") 16 0, auto;
 }
   
 a:active{
@@ -189,41 +206,36 @@ a:active{
 
 .things{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
 
 .box{
     padding: 0;
+    margin-bottom: -0.5rem;
 }
 
 .box p{
-    font-family: "DinamoABCWhyte-Light";
+    font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
 .box ul{
-    font-family: "DinamoABCWhyte-Light";
+    font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
-/* iframe{
-    opacity: 0;
-} */
 
-iframe:hover{
-    opacity: 1;
-}
-
-@media (max-width: 800px){
-    .things{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-    }
+/* styles for screens smaller than 800px wide */
+@media screen and (max-width: 800px){
     .navigation{
         display: none;
     }
     .mobile-menu{
         opacity: 1;
         display: block;
+    }
+    .things{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
     }
 }

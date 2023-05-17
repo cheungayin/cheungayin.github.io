@@ -155,7 +155,7 @@ function setup() {
     } else {
       sunRadius = 1;
     }
-
+    
     // console.log(sunRadius);
 
     let currentOrbCircle = new OrbitingCircle(

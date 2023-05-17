@@ -101,7 +101,6 @@ body{
     display: flex;
     flex-direction: row;
     text-align: right;
-    margin-right: -0.9em;
     list-style-type: none;
     padding: 0;
     column-gap: 2em;
@@ -231,20 +230,20 @@ a:active{
 
 .things{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
 
-.box{
+.things div{
     padding: 0;
     margin-bottom: -0.5rem;
 }
 
-.box p{
+.things p{
     font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
-.box ul{
+.things ul{
     font-family: "DinamoABCWhyte-Light", sans-serif;
 }
 
@@ -330,7 +329,10 @@ a:active{
 }
 
 /* styles for screens smaller than 800px wide */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
+    body, h1, h2, h3{
+        font-size: 0.9em;
+    }
     .navigation{
         display: none;
     }
@@ -340,7 +342,7 @@ a:active{
     }
     .things{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
     }
     #aboutme{
@@ -355,5 +357,16 @@ a:active{
     }    
     .twocolumngrid{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .things{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    body, h1, h2, h3{
+        font-size: 1em;
     }
 }
