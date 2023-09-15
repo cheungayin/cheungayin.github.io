@@ -82,6 +82,7 @@ body{
     justify-content: space-between;
     top: 0;
     position: sticky;
+    z-index: 999;
 }
 
 .main-title{
@@ -328,6 +329,66 @@ a:active{
     gap: 1rem;
 }
 
+/* .photo-grid{
+    display: flex;
+    padding: .5rem .5rem 0 .5rem;
+    flex-flow: row wrap;
+}
+
+.photo-grid img{
+    flex: 33%;
+    position:relative
+} */
+
+/* #filter{
+    z-index: 900;
+    position: sticky;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+} */
+
+.photo-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.photo-grid div{
+    padding: 0;
+    margin: 0;
+}
+
+.photo-grid img{
+    opacity: 1;
+    width: 100%;
+    height: auto;
+}
+
+.grid-photo{
+    position: relative;
+}
+
+.photo-caption{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    opacity: 0;
+}
+
+.grid-photo:hover .photo-caption{
+    opacity: 1;
+}
+
+.grid-photo:hover{
+    opacity: 0.75;
+}
+
+
 /* styles for screens smaller than 800px wide */
 @media screen and (max-width: 768px){
     body, h1, h2, h3{
@@ -358,6 +419,9 @@ a:active{
     .twocolumngrid{
         grid-template-columns: repeat(1, 1fr);
     }
+    .photo-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -368,5 +432,8 @@ a:active{
     }
     body, h1, h2, h3{
         font-size: 1em;
+    }
+    .photo-grid{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
