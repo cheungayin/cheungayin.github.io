@@ -1,0 +1,297 @@
+@font-face{
+    font-family: "ABCDiatype-Regular-Trial";
+    src:url("./fonts/ABCDiatype-Regular-Trial.woff") format("woff");
+    src:url("./fonts/ABCDiatype-Regular-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "ABCDiatype-RegularItalic-Trial";
+    src:url("./fonts/ABCDiatype-RegularItalic-Trial.woff") format("woff");
+    src:url("./fonts/ABCDiatype-RegularItalic-Trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "lardent-classic-regular-italic-trial";
+    src:url("./fonts/lardent-classic-regular-italic-trial.woff") format("woff");
+    src:url("./fonts/lardent-classic-regular-italic-trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:italic;
+}
+
+@font-face{
+    font-family: "lardent-classic-regular-trial";
+    src:url("./fonts/lardent-classic-regular-trial.woff") format("woff");
+    src:url("./fonts/lardent-classic-regular-trial.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    background-color: white;
+    font-size: 1.5em;
+    line-height: 1.15em;
+    font-family: "lardent-classic-regular-trial";
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #000000;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔍</text></svg>") 16 0, auto;
+    transition: font-size 0.2s ease;
+}
+
+::-moz-selection{
+    background: #000000;
+    color: #ffffff;
+}
+  
+::selection{
+    background: #000000;
+    color: #ffffff;
+}
+
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    display: inline-block;
+    color: inherit;
+}
+
+a:hover{
+    /* color:#1b0fd7; */
+    text-decoration: dotted underline;
+    /* font-family: "DinamoABCWhyte-Heavy"; */
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='75' height='90' style='fill:black;font-size:45px;'><text y='50%'>🕵️‍♂️</text></svg>") 16 0, auto;
+}
+  
+a:active{
+    color: #ff3000;
+}
+
+
+.twocolumn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5%;
+}
+
+.twocolumn-grid div{
+    padding: 0;
+    margin-bottom: 2.5%;
+}
+
+.about{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+    margin-bottom: 5%;
+}
+
+h1{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+    font-size: 3rem;
+    line-height: 1.15em;
+}
+
+.sizechange{
+    transition: font-size 0.1s ease;
+    /* display: inline-block; */
+    text-align: center;
+    margin-top: 2.5%;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+    font-size: 3rem;
+}
+
+.threecolumn-grid{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5%;
+}
+
+.threecolumn-grid div{
+    padding: 0;
+    margin-bottom: 2.5%;
+}
+
+.bigger-font{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+    font-size: 7.25rem;
+    line-height: 1.15em;
+    margin-top: -0.15em;
+}
+
+.smaller-font{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.15em;
+}
+
+.smaller-font a:hover{
+    color:#1b0fd7;
+    font-size: 3rem;
+    line-height: 1.15em;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🔍</text></svg>") 16 0,auto;
+}
+
+.bigger-font a:hover{
+    color:#1b0fd7;
+    /* font-size: 2rem; */
+    /* margin-top: 0;
+    padding-top: 0;
+    line-height: -100%; */
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🔎</text></svg>") 16 0,auto;
+}
+
+.byline{
+    font-family: "ABCDiatype-Regular-Trial", sans-serif;
+}
+
+.leadin{
+    font-family: "lardent-classic-regular-italic-trial", serif;
+    font-style: italic;
+}
+
+img{
+    width: 50%;
+    padding-top: 0.5em;
+    padding-bottom: 0.15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video{
+    width: 50%;
+    padding-top: 0.5em;
+    padding-bottom: 0.15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe{
+    width: 100%;
+    border: 0;
+}
+
+.caption{
+    /* font-size: 0.75rem; */
+    width: 50%;
+    margin-top: 0;
+    padding-bottom: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pullquote{
+    font-family: "ABCDiatype-RegularItalic-Trial", sans-serif;
+    font-style: italic;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.embed{
+    width: 50%;
+    position:relative;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.youtube-embed{
+    /* width: 50%; */
+    display: block;
+}
+
+.ig-embed{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span{
+    font-style: italic;
+}
+
+.smalltype h1{
+    font-size: 0.5rem;
+    line-height: 1em;
+}
+
+.smalltype h2{
+    font-size: 0.25rem;
+    line-height: 1.15em;
+}
+
+.smalltype p{
+    font-size: 0.25rem;
+    line-height: 1.15em;
+}
+
+.smalltype .caption{
+    font-size: 0.1875rem;
+}
+
+.bigtype{
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🔎</text></svg>") 16 0, auto;
+    /* margin-top: 5%; */
+}
+
+.bigtype h1{
+    margin-top: 0;
+    font-size: 30rem;
+    line-height: 1em;
+}
+
+.bigtype p{
+    font-size: 15rem;
+    line-height: 1.15em;
+}
+
+.bigtype .caption{
+    font-size: 3.75rem;
+}
+
+.bigtype img{
+    margin-bottom: 1em;
+}
+
+.footer{
+    background: #ffffff;
+    /* width: 100vw; */
+    height: max-content;
+    display: flex;
+    justify-content: end;
+    bottom: 2.5%;
+    position: fixed;
+    margin-right: 2.5%;
+    right: 0;
+}
+
+.footer a:hover{
+    text-decoration: none;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='75' height='90' style='fill:black;font-size:45px;'><text y='50%'>🕵️‍♂️</text></svg>") 16 0, auto;
+}
+
+@media screen and (max-width: 768px){
+    .twocolumn-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
