@@ -215,6 +215,7 @@ h3{
 img{
     width: 100%;
     height: auto;
+    border-radius: .25em;
 }
 div{
     margin-top: 1rem;
@@ -469,7 +470,7 @@ a:active{
         grid-template-columns: repeat(3, 1fr);
     }
     body, h1, h2, h3{
-        font-size: .95em;
+        font-size: .9em;
     }
     .photo-grid{
         grid-template-columns: repeat(3, 1fr);
