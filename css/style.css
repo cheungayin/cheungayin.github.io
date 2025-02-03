@@ -428,7 +428,7 @@ a:active{
 /* styles for screens smaller than 800px wide */
 @media screen and (max-width: 768px){
     body, h1, h2, h3{
-        font-size: .9em;
+        font-size: 0.85em;
     }
     .navigation{
         display: none;
@@ -470,7 +470,7 @@ a:active{
         grid-template-columns: repeat(3, 1fr);
     }
     body, h1, h2, h3{
-        font-size: .9em;
+        font-size: 0.85em;
     }
     .photo-grid{
         grid-template-columns: repeat(3, 1fr);
