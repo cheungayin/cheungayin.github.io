@@ -13,12 +13,14 @@ function setup() {
   background("pink");
   strokeWeight(10);
   stroke("255, 100");
-  saveButton = createButton("DOWNLOAD PNG");
-  saveButton.position(w - 120, h + 90);
-  saveButton.mousePressed(download);
   clearButton = createButton("CLEAR");
-  clearButton.position(0 + 10, h + 90);
+  // clearButton.position(0 + 10, h + 90);
   clearButton.mousePressed(clean);
+  clearButton.style('margin', '5px');
+  saveButton = createButton("DOWNLOAD PNG");
+  // saveButton.position(w - 120, h + 90);
+  saveButton.mousePressed(download);
+  saveButton.style('margin', '5px');
   // drawing grid!!
   //For (var BEGIN; END; INTERVAL){
   //DO SOMETHING }
