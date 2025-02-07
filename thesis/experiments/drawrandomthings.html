@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw random things!</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+<script>
+    const animals = ['dog', 'cat', 'fish', 'frog', 'bunny', 'turtle', 'dinosaur', 'pig'];
+    let currentAnimal = 'dog';
+    
+    window.onload = () =>{
+        const btn = document.getElementById("change-animal");
+        const prompt = document.getElementById("drawing-prompt");
+
+            function getRandomAnimal() {
+                // create array excluding current animal
+                const availableAnimals = animals.filter(animal => animal !== currentAnimal);
+                // get random animal from available ones
+                const randomIndex = Math.floor(Math.random() * availableAnimals.length);
+                return availableAnimals[randomIndex];
+            }
+
+            btn.addEventListener("click", () => {
+                currentAnimal = getRandomAnimal();
+                prompt.textContent = `draw a ${currentAnimal}!`;
+            });
+    }
+</script>
+<body>
+    <p id="drawing-prompt">draw a dog!</p>
+    <button id="change-animal" style="margin-bottom: 1em;">change animal</button>
+
+    <script src="./sketch.js"></script>
+</body>
+
+
+</html>
