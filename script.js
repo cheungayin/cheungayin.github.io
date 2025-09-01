@@ -1,49 +1,42 @@
-// define our variables
-let toggleMenu = document.querySelector(".mobile-menu");
-let headerStatus = document.querySelector(".header");
+// // define our variables
+// let toggleMenu = document.querySelector(".mobile-menu");
+// let headerStatus = document.querySelector(".header");
 
-// when user clicks on "menu", open and close the mobile navigation
-toggleMenu.addEventListener( "click", () => {
-    if (headerStatus.classList.contains("open")) {
-        headerStatus.classList.remove("open");
+// // when user clicks on "menu", open and close the mobile navigation
+// toggleMenu.addEventListener( "click", () => {
+//     if (headerStatus.classList.contains("open")) {
+//         headerStatus.classList.remove("open");
+//     }
+//     else{
+//         headerStatus.classList.add("open");
+//     }
+// },
+// false,
+// );
+
+//FILTER!!!
+
+// default show all items on load
+filterSelection("all");
+function filterSelection(category) {
+    const items = document.getElementsByClassName("filter");
+    for (let i = 0; i < items.length; i++) {
+    items[i].classList.remove("show");
+
+    if (category === "all" || items[i].classList.contains(category)) {
+        items[i].classList.add("show");
     }
-    else{
-        headerStatus.classList.add("open");
     }
-},
-false,
-);
+}
 
-function checkFilters() {
+// add active class to the current button
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
 
-    let checked = [];
-
-    $('input[type="checkbox"] + label').css("opacity", 1);
-    $('input[type="checkbox"]:not(:checked) + label').css("opacity", 0.5);
-
-    if ($("#filter .filter-type input:checkbox:checked").length > 0) {
-
-        $('#filter .filter-type input[type="checkbox"]:checked').each(function () {
-        checked.push( "[" + $(this).attr("name") + "]");
-        });
-    } else{
-    $('input[type="checkbox"] + label').css("opacity", 1);
-    }
-
-    if (checked.length == 0 || checked == null) {
-        $("#i > *").css("opacity", 1).css("pointer-events", "auto");
-        return;
-    }
-
-    $(checked).each(function (i, e) {
-        $("#i > *" + e).css("opacity", 1).css("pointer-events", "auto");
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+    const current = btnContainer.querySelector(".active");
+    if (current) current.classList.remove("active");
+    this.classList.add("active");
     });
-
-    };
-
-    // CHECKBOX 
-    $("#filter .filter-type input[type='checkbox']").change(function () {  
-    $("#i > *").css("opacity", 0).css("pointer-events", "none");
-    checkFilters();
-});
-  
+}

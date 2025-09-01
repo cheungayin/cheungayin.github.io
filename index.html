@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>everything jan made</title>
+    <title>janice cheung</title>
 
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="icon" type="image/x-icon" href="img/grimacing-face.png">
+    <link rel="icon" type="image/x-icon" href="img/smiley.jpg">
 
     <script src="./script.js" defer></script>
-
-    
 </head>
 <body>
 
@@ -29,33 +27,17 @@
         <div class="main-title">
             <a href="/index.html">JANICE CHEUNG</a>
         </div>
-    
+
         <ul class="navigation">
-            <li><a href="/index.html" style="color:#1b0fd7;">all</a></li>
-            <li><a href="/design.html">design</a></li>
+            <li><a href="/index.html">all things design</a></li>
             <li><a href="/photography.html">photography</a></li>
-            <li><a href="/video.html">video</a></li>
-            <li><a href="/others.html">others</a></li>
-            <li><a href="/info.html">info</a></li>
         </ul>
 
-        <!-- <div class="filter-type">
-            <input type="checkbox" name="all" id="all">
-            <label for="all" style="opacity: 1;">all</label>
-            <input type="checkbox" name="design" id="design">
-            <label for="design" style="opacity: 1;">design</label>
-            <input type="checkbox" name="photography" id="photography">
-            <label for="photography" style="opacity: 1;">photography</label>
-            <input type="checkbox" name="video" id="video">
-            <label for="video" style="opacity: 1;">video</label>
-            <input type="checkbox" name="others" id="others">
-            <label for="others" style="opacity: 1;">others</label>
-            <input type="checkbox" name="info" id="info">
-            <label for="info" style="opacity: 1;">info</label>
-            <label><a href="/info.html">info</a></label>
-        </div> -->
+        <div class="navigation">
+            <a href="/info.html">info</a>
+        </div>
 
-        <div class="mobile-menu">
+        <!-- <div class="mobile-menu">
             menu: &#129386;
         </div>
     
@@ -66,12 +48,22 @@
             <li><a href="/video.html">video</a></li>
             <li><a href="/others.html">others</a></li>
             <li><a href="/info.html">info</a></li>
-        </ul>
+        </ul> -->
 
     </header>
 
-    <p>Hello! &#129303;<br>Janice is a graphic communication designer currently based in NYC. :)</p>
-    <!-- <br>Click on the links/underlined titles/images to view more. -->
+    <div id="myBtnContainer">
+        <span>filters: </span>
+        <button class="btn active" onclick="filterSelection('all')">all</button>
+        <button class="btn" onclick="filterSelection('graphic')">graphic design</button>
+        <button class="btn" onclick="filterSelection('printmaking')">printmaking</button>
+        <button class="btn" onclick="filterSelection('video')">video/motion</button>
+        <button class="btn" onclick="filterSelection('other')">other</button>
+        <span>(sorted by most recent!)</span>
+    </div>
+
+    <p>Hello and welcome! Janice Cheung is a Brooklyn-based graphic communication designer. Take a look at some of her work  :)</p>
+    <p>Click <a href="/portfolio.html" style="color:#1b0fd7;">HERE</a> to view the PDF version of her Graphic Design Portfolio!</p>
 
     <div class="things">
          <!-- <a href="">
@@ -84,7 +76,7 @@
         <!-- SENIOR YEAR 4 -->
         <!-- FALL 2024: artist's books, CNC machine, designing lighting, sound desgin -->
         
-        <a href="./design/f24_cnc_stand.html">
+        <a href="./design/f24_cnc_stand.html" class="filter other">
             <div>
                 <h2>CNC Machine Record Player Stand & Storage (Dec 2024)</h2>
                 <p>A turntable stand and record storage made using the CNC Machine. Made of 1/2" Baltic Birch Plywood.</p>
@@ -92,7 +84,7 @@
             </div>
         </a>
 
-        <a href="./design/f24_artistsbooks_newsignin.html">
+        <a href="./design/f24_artistsbooks_newsignin.html" class="filter graphic">
             <div>
                 <h2>A new sign in on (censor bar) (Nov 2024)</h2>
                 <p>This artist's book reinterprets Google's security notifications through typography and composition, turning everyday digital alerts into a visual narrative that explores our relationship with online identity and authentication.</p>
@@ -100,7 +92,7 @@
             </div>
         </a>
 
-        <a href="./design/f24_artistsbooks_1903.html">
+        <a href="./design/f24_artistsbooks_1903.html" class="filter graphic printmaking">
             <div>
                 <h2>1903 film sequence (Sep 2024)</h2>
                 <p>This artist's book showcases an unedited 35mm film roll from the summer of 2024, presented in an accordion format with fold-out sections. It preserves the film's original dimensions to demonstrate how moments connect and flow through time as they were originally captured.<br>
@@ -112,7 +104,7 @@
         <!-- JUNIOR YEAR 3 -->
         <!-- SPRING 2024: touchdesigner, motion graphics, ui4ai, adv screenprint -->
         
-        <a href="./design/s24_motiongraphics_manifesto.html" design>
+        <a href="./design/s24_motiongraphics_manifesto.html" class="filter graphic video">
             <div>
                 <h2>Manifesto: Designer as Curious George (May 2024)</h2>
                 <p>I created a motion graphic for Constantin and Laurene Leon Boym's "Manifesto #16: Designer as Curious George" from the design manifestos collection. This manifesto resonated with me because it uses the character Curious George to illustrate how designers should always be driven to play, experiment, and embrace failure as a learning experience.</p>
@@ -120,7 +112,7 @@
             </div>
         </a>
 
-        <a href="https://www.youtube.com/embed/uv8_3bVB5rk?si=8b5yBRUDaDRRWQzO" target="_blank" design video>
+        <a href="https://www.youtube.com/embed/uv8_3bVB5rk?si=8b5yBRUDaDRRWQzO" target="_blank" class="filter video">
             <div>
                 <h2>TouchDesigner: Artist Recreation (May 2024)</h2>
                 <p>Inspired by Camille Utterback’s installations, in which she uses different texts, icons, images, etc., to create abstract symbolic systems, as well as our relationship with interfaces and symbolic systems of the machines, I recreated her installation, Visual Resolve, 2000, an abstracted version of the participants created on the screen, where she explores the levels of the icons and the overall image. This project connects to the <i>Magnification</i> project, and exploring how magnification can be experimented with and how it challenges our visual perception in a digital space.<br><br>
@@ -131,7 +123,7 @@
             </div>
         </a>
 
-        <a href="https://youtu.be/gkAZcwOD3yU" target="_blank" video design>
+        <a href="https://youtu.be/gkAZcwOD3yU" target="_blank" class="filter video">
             <div>
                 <h2>TouchDesigner: Music Visualizer (Apr 2024)</h2>
                 <p>I created my own VJ set with 4 unique audio reactive visualizers to play through Jungle's <i>Candle Flame</i>. I linked up TouchOSC to handle transitioning between the visualizers and controlling parameters in each visualizer.</p>
@@ -142,7 +134,7 @@
             </div>
         </a>
         
-        <a href="./design/s24_motiongraphics_print2motion.html" design>
+        <a href="./design/s24_motiongraphics_print2motion.html" class="filter graphic video">
             <div>
                 <h2>From Print to Motion (Apr 2024)</h2>
                 <p>YOKKAO's Muay Thai hand wraps feature typography and icon, providing a balance of detail for animation. I created a 15-second animation using After Effects that reveals the visual elements of the hand wraps' design.</p>
@@ -150,7 +142,7 @@
             </div>
         </a>
 
-        <a href="https://youtu.be/l_N4Pn2rqFc" target="_blank" video design>
+        <a href="https://youtu.be/l_N4Pn2rqFc" target="_blank" class="filter video">
             <div>
                 <h2>TouchDesigner: Experimental Camera (Mar 2024)</h2>
                 <p>This project explores designing a camera to capture specific subjects—whether a person, place, or object. It investigates how camera features and filters influence and alter our perception of these subjects. This project challenges conventional cameras by offering unique perspectives through their specialized functions and filter effects.</p>
@@ -161,7 +153,7 @@
             </div>
         </a>
 
-        <a href="./design/s24_motiongraphics_motionsound.html" design>
+        <a href="./design/s24_motiongraphics_motionsound.html" class=" filter graphic video">
             <div>
                 <h2>A Play with Motion & Sound (Feb 2024)</h2>
                 <p>In this project, the class collaboratively created a "music video" using the given music piece by combining shapes and movement techniques to illustrate synesthesia and cause and effect. I aimed to align the visuals with the music, considering composition, sequence, and color palettes. Each student animated an assigned music segment and also created the opening title and closing credits for the class compilation using After Effects.</p>
@@ -169,7 +161,7 @@
             </div>
         </a>
 
-        <a href="./design/s24_motiongraphics_news.html" design>
+        <a href="./design/s24_motiongraphics_news.html" class="filter graphic video">
             <div>
                 <h2>Breaking News: Long Live the Chicago Rat Hole (Feb 2024)</h2>
                 <p>This project explores how time-based presentation can transform a simple typographic message, examining the interplay between form and content in motion. By animating the headline of the article "Long Live the Chicago Rat Hole" from <i>The Atlantic</i>, I looked the effects of size, placement, composition, sound, speed, pauses, repetition, spacing, and color on the message over time. This project aims to reveal the dynamic potential of headlines through motion.</p>
@@ -177,7 +169,7 @@
             </div>
         </a>
 
-        <a href="https://youtu.be/Vm_pwTQNpb" target="_blank" video design>
+        <a href="https://youtu.be/Vm_pwTQNpb" target="_blank" class="filter video">
             <div>
                 <h2>TouchDesigner: Animation (Feb 2024)</h2>
                 <p>The conceptual focus is on distortion and pixelation, with an audio track that complements the visual theme. I experimented with different elements as starting points and built on the initial elements using other TOPs and CHOPs.</p>
@@ -190,7 +182,7 @@
 
         <!-- FALL 2023: core3 topics, multiple editizons, 16mm, ceramics -->
 
-        <a href="https://youtu.be/NWyZFEHdYHc" target="_blank" video>
+        <a href="https://youtu.be/NWyZFEHdYHc" target="_blank" class="filter video">
             <div>
                 <h2>hands (Oct 2023)</h2>
                 <p>Shot on 16mm film. Moving from the everyday rhythm of pedestrian life to the charm of artistic moments, the film reaches its peak with hands in a lively dance. Each frame shares the unique stories held in the hands of a lively city, unveiling a new tale in every shot.</p>
@@ -198,7 +190,7 @@
             </div>
         </a>
 
-        <a href="./design/f23_core3_magnification.html" design>
+        <a href="./design/f23_core3_magnification.html" class="filter graphic">
             <div>
                 <h2>Magnification (Nov 2023)</h2>
                 <p>This project investigates the microscope as an instrument of revelation, one that reveals the complexities of the invisible, how magnification embraces what is not apparent and reveals an intricate web of sophistication and elegance woven into even the smallest elements, where each magnified imagery turns the ordinary into something extraordinary. A digital form of the book is also created to explore the same concept and content but on a screen.</p>
@@ -206,7 +198,7 @@
             </div>
         </a>
 
-        <a href="./design/f23_core3_complement.html" design>
+        <a href="./design/f23_core3_complement.html" class="filter graphic">
             <div>
                 <h2>Complement :) (Oct 2023)</h2>
                 <p>This project (publication & website mockup) takes a closer look at the intricate connection of elements, showing how even those with less innate value on their own can enhance and elevate something else, eventually improving that “something else.” It is about the underlying relationships and the narratives, how each small, simple thing can develop and expand to become a part of an interesting story and add to a more vibrant whole. So a lot of things in our environment contributes to creating a narrative, enhancing an experience, and ultimately, making something better.</p>
@@ -218,7 +210,7 @@
         <!-- SPRING 2023: core 2 type & code, photo etching, letterpress -->
         <!-- continue adding photo etchings & letterpress -->
     
-        <a href="./ci2/studio/schoolbusnyc/index.html" target="_blank" design>
+        <a href="./ci2/studio/schoolbusnyc/index.html" target="_blank" class="filter graphic">
             <div class="">
                 <h2>wheels on the bus (May 2023)</h2>
                 <p>(project 3. intx w/ the city: New York City in Data)<br>
@@ -227,7 +219,7 @@
             </div>
         </a>
 
-        <a href="./design/s23_letterpress_ufcposter.html" design others printmaking>
+        <a href="./design/s23_letterpress_ufcposter.html" class="filter graphic printmaking">
             <div>
                 <h2>UFC 287: Pereira vs Adesanya 2 (Apr 2023)</h2>
                 <p>Event poster printed on the letterpress for UFC 287: Pereira vs Adesanya 2, a mixed martial arts event by the Ultimate Fighting Championship that took place at the Kaseya Center in Miami, Florida on April 8, 2023.</p>
@@ -242,7 +234,7 @@
             </div>
         </a> -->
 
-        <a href="./ci2/studio/elasticcollection/index.html" target="_blank" design>
+        <a href="./ci2/studio/elasticcollection/index.html" target="_blank" class="filter graphic">
             <div>
                 <h2>People Watching People: Chinatown, Manhattan, NY (Apr 2023)</h2>
                 <p>(project 2. intx w/ data: Elastic Collection)<br>
@@ -255,7 +247,7 @@
             </div>
         </a>
 
-        <a href="./design/s23_core2type_project2home.html" design>
+        <a href="./design/s23_core2type_project2home.html" class="filter graphic">
             <div>
                 <h2>Home (Apr 2023)</h2>
                 <p>A 48-page zine on Chinese and Thai wedding traditions. As someone with Chinese and Thai heritage, this developed from my interest in these cultures' wedding traditions and cultures.</p>
@@ -263,7 +255,7 @@
             </div>
         </a>
 
-        <a href="./ci2/studio/onbeginnings/index.html" target="_blank" design>
+        <a href="./ci2/studio/onbeginnings/index.html" target="_blank" class="filter graphic">
             <div>
                 <h2>Stories as Networks (Feb 2023)</h2>
                 <p>(project 1. intx w/ typography)<br>
@@ -272,7 +264,7 @@
             </div>
         </a>
 
-        <a href="./ci2/lab/lab.html" design>
+        <a href="./ci2/lab/lab.html" target="_blank" class="filter graphic">
             <div>
                 <h2>Core 2: Interaction - Lab Assignments (Jan-May 2023)</h2>
                 <p>Core 2: Interaction Lab is designed around a series of small workshops that teach beginning and intermediate interaction design through a hands-on engagement with HTML, CSS and Javascript.</p>
@@ -282,7 +274,7 @@
 
         <!-- FALL 2022: core 1 type & code, intro to print, cut sew make -->
 
-        <a href="./ci1/index.html" target="_blank" design>
+        <a href="./ci1/index.html" target="_blank" class="filter graphic">
             <div>
                 <h2>Core 1: Interaction (Aug-Dec 2022)</h2>
                 <p>Harmonic Collection: each week, an entry is designed and coded to this collection that explores my daily life. at the end of the semester, a website that houses 10 programmed entries is delivered.</p>
@@ -290,7 +282,7 @@
             </div>
         </a>
 
-        <a href="./design/f22_core1type_editorialdesign.html" design>
+        <a href="./design/f22_core1type_editorialdesign.html" class="filter graphic">
             <div>
                 <h2>Editorial Design (Dec 2022)</h2>
                 <p>A 50-page publication based on a selection of articles from a credible online newspaper (or magazine).</p>
@@ -298,7 +290,7 @@
             </div>
         </a>
 
-        <a href="./design/f22_core1type_typographicposter.html" design>
+        <a href="./design/f22_core1type_typographicposter.html" class="filter graphic">
             <div>
                 <h2>Typographic Poster (Nov 2022)</h2>
                 <p>A typographic poster promoting the “opening” of TamJai SamGor MiXian, a renowned noodle shop from Hong Kong, incorporating Chinese typography to showcase the rich cultural heritage and essence of the restaurant.</p>
@@ -306,7 +298,7 @@
             </div>
         </a>
 
-        <a href="./design/f22_core1type_typecontrast.html" design>
+        <a href="./design/f22_core1type_typecontrast.html" class="filter graphic">
             <div>
                 <h2>Typographic Contrast (Oct 2022)</h2>
                 <p>A booklet delving into the artistic impact of typographic contrast, offering a comprehensive study of its formal effects, diverse visual outcomes, and layout design in a multipage format.</p>
@@ -314,7 +306,7 @@
             </div>
         </a>
 
-        <a href="./design/f22_core1type_modulartypeface.html" design>
+        <a href="./design/f22_core1type_modulartypeface.html" class="filter graphic">
             <div>
                 <h2>Modular Typeface (Sep 2022)</h2>
                 <p>A distinctive typeface constructed by merging modular components using fixed units and an underlying grid, exploring the defining characteristics of each letter and the visual cohesion created by repeating elements.</p>
@@ -325,21 +317,21 @@
         <!-- FIRST YEAR 1 -->
         <!-- SPRING 2022: int sem & studio 2, time, photo methods & materials, product promotion & packaging -->
 
-        <a href="https://youtu.be/JWVFvcVXLA4" target="_blank" video>
+        <a href="https://youtu.be/JWVFvcVXLA4" target="_blank" class="filter video">
             <h2>MVI_2496 (May 10-12, 2022)</h2>
             <p>Video animation using cyanotypes and screen grabs from video taken at Cheat Code's concert in New York, NY on Feb 05, 2022.<br>
                 <i>*** warning: video contains flashing images and loud audio!</i></p>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/JWVFvcVXLA4?si=xlQwoU4Z-Yd6SvbX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </a>
 
-        <a href="https://youtu.be/afHHOEEI_Tg" target="_blank" video>
+        <a href="https://youtu.be/afHHOEEI_Tg" target="_blank" class="filter video">
             <h2>MVI_2400 (May 10-12, 2022)</h2>
             <p>Video animation using cyanotypes and screen grabs from video taken at Cheat Code's concert in New York, NY on Feb 05, 2022.<br>
                 <i>*** warning: video contains flashing images and loud audio!</i></p>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/afHHOEEI_Tg?si=smxIDbOqX-zhSWle" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </a>
 
-        <a href="./design/s22_intstudio2_idkuyet.html" design>
+        <a href="./design/s22_intstudio2_idkuyet.html" class="filter graphic">
             <div>
                 <h2>I DON'T KNOW YOU (YET) (May 2022)</h2>
                 <p>The card game “I DON'T KNOW YOU (YET)” aims to foster vulnerability and deep conversations, providing a safe space for transparency and meaningful connections through three levels of questions and wildcards, with a pastel color palette reflecting openness and relaxation.</p>
@@ -347,7 +339,7 @@
             </div>
         </a>
 
-        <a href="https://youtu.be/TmGu00mS2_c" target="_blank" video>
+        <a href="https://youtu.be/TmGu00mS2_c" target="_blank" class="filter video">
             <h2>Post Concert Blues (Jan-May 2022)</h2>
             <p>In this one minute video project, I created a documentation of a performance, more specifically capturing a concert and what it means to leave the space right after, to have the music follow you or linger, but to have to “conceal” it in public.</p>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/TmGu00mS2_c?si=Y6IEBQZmxm6hg3En" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -355,7 +347,7 @@
 
         <!-- FALL 2021: drawing/imaging, int sem & studio 1, space/materiality -->
 
-        <a href="https://youtu.be/efgHuF2wIfw" target="_blank" video>
+        <a href="https://youtu.be/efgHuF2wIfw" target="_blank" class="filter video">
             <h2>love story (Dec 2021)</h2>
             <p><i>love story</i> is a short film about the relationship between GIRL 1 and GIRL 2 (played by Aviela Berk & Sade Ajas) and how it turns out to be not as romantic as you might think. The art film experiments with the archetypes of psychological horror films and attempts to break the stereotypical “look” and “plot” while still aiming to leave the audience unsettled afterwards.<br><br>
                 Shot in Boston, MA and New York, NY.<br>
@@ -363,7 +355,7 @@
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/efgHuF2wIfw?si=FBQGAzdVOcKp9O9D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </a>
 
-        <a href="https://youtu.be/F2HOEjcvZgw" target="_blank" video>
+        <a href="https://youtu.be/F2HOEjcvZgw" target="_blank" class="filter video">
             <h2>GOODBYE, SUMMER (Sep 15, 2021)</h2>
             <p>Video documentation of my 2021 summer spent with friedns and family in Hong Kong during COVID and after high school graduation in May 2020.<br><br>
                 Shot in Hong Kong, edited in New York, NY.<br>
@@ -372,7 +364,7 @@
         </a>
 
         <!-- 2018 -->
-        <a href="https://youtu.be/8GMsOr7Iy8k" target="_blank" video>
+        <a href="https://youtu.be/8GMsOr7Iy8k" target="_blank" class="filter video">
             <h2>ANAIA 2019 x LEVI'S (Feb 10 ,2018)</h2>
             <p>ANAIA is Island School's annual student-led fashion show, supporting a charity, Maggie's Cancer Caring Centre. To acknowledge the collaboration between Levi’s®️ and ANAIA 2019, this promotional video was designed to capture how the Levi’s®️ brand epitomizes classic American style and effortless cool, and to celebrate self-expression and individuality through their clothing.<br><br>
                 Produced in Hong Kong.<br>
@@ -380,7 +372,7 @@
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/8GMsOr7Iy8k?si=pEO5W4TIWcuubr79" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </a>
 
-        <a href="https://youtu.be/rwgWiQotkOs" target="_blank" video>
+        <a href="https://youtu.be/rwgWiQotkOs" target="_blank" class="filter video">
             <h2>ANAIA 2019 x FACE REVEAL (Oct 03, 2018)</h2>
             <p>This promotional video was used to announce the faces of ANAIA 2019. The video not only helped promote the upcoming show, it also showcased an opportunity for students to become a model.<br><br>
                 Produced in Hong Kong.<br>
