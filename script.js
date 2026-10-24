@@ -14,6 +14,19 @@
 // false,
 // );
 
+
+const sidebar = document.querySelector(".sidebar");
+const menuToggle = document.querySelector(".menu-toggle");
+
+if (sidebar && menuToggle) {
+    menuToggle.addEventListener("click", function () {
+        const isOpen = sidebar.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen ? "close" : "menu";
+    });
+}
+
+
 //FILTER!!!
 
 // default show all items on load

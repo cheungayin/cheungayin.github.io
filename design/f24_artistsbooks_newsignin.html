@@ -9,37 +9,42 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="img/smiley.jpg">
     
-    <script src="./script.js" defer></script>
+    <script src="/script.js" defer></script>
     
 </head>
 <body>
 
-    <header class="header">
+    <div class="layout">
 
-        <div class="main-title">
-            <a href="/index.html">JANICE CHEUNG</a>
-        </div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <span class="main-title">
+                    <a href="/index.html">JANICE CHEUNG</a>
+                </span>
+                <button class="btn menu-toggle" aria-expanded="false" aria-controls="sidebar-info">menu</button>
+            </div>
+            <div class="sidebar-info" id="sidebar-info">
+                <p>is a designer based in Brooklyn, New York. She graduated with a Bachelor of Fine Arts (BFA) in Communication Design with a minor in Printmaking from Parsons School of Design. She is passionate about graphic communication design, specifically print production, as well as all things creative, especially when it comes to tactility.</p>
+                <div>
+                    <a href="mailto:cheungayin@gmail.com">email</a><br>
+                    <a href="https://www.linkedin.com/in/cheungayin/" target="_blank">linkedin</a><br>
+                    <a href="https://www.instagram.com/cheungayin_/" target="_blank">instagram</a><br>
+                    <a href="https://www.are.na/janice-cheung" target="_blank">are.na</a><br>
+                    <a href="https://open.spotify.com/user/cheungayin?si=2dfdb496023a445a" target="_blank">spotify</a>
+                </div>
+                <p>this page is showing selected work!<br>
+                <a href="/archive.html">> more work in the archive!</a><br>
+                    <!-- grid view showing all the work ive done :P -->
+                <a href="/info.html">info</a></p>
+            </div>
+        </aside>
 
-        <ul class="navigation">
-            <li><a href="/index.html">design</a></li>
-            <li><a href="/photography.html">photography</a></li>
-        </ul>
+        <main class="content">
+            <h1>A new sign in on (censor bar) (Nov 2024)</h1>
+            <h3>for ARTIST'S BOOKS: CONTENT & FORM with <a href="https://www.sarahnicholls.com/" target="_blank">Sarah Nicholls</a> (Fall 2024): PROJECT #2 The Visual Voice-Language and Image</h3>
 
-        <div class="navigation">
-            <a href="/info.html">info</a>
-        </div>
-
-    </header>
-
-    <div>
-        <h1>A new sign in on (censor bar) (Nov 2024)</h1>
-        <h3>for ARTIST'S BOOKS: CONTENT & FORM with <a href="https://www.sarahnicholls.com/" target="_blank">Sarah Nicholls</a> (Fall 2024): PROJECT #2 The Visual Voice-Language and Image</h3>
-
-        <div class="halfhalf">
             <div>
                 <img src="./img/f24_artistsbooks/newsignin_cover.jpg" style="border: .25px solid #000000;">
-            </div>
-            <div>
                 <p>This artist’s book transforms ordinary security notifications into an exploration of digital identity and presence. Through thoughtful typographic treatment and spatial composition, this book reinterprets Google’s automatic email alerts into a visual narrative that challenges our relationship with digital authentication. The repetitive yet subtly varying text establishes a rhythm that reflects our everyday digital experiences. At the same time, the design invites readers to engage with these often-ignored messages in both text and abstract form.<br><br>
                     Black and white laser print on Neenah Classic Crest Natural White 80T and 65C<br>
                     4 &#215; 5 inches<br>
@@ -51,17 +56,17 @@
                     <br><br>
                     Students will take advantage of the features of the structure they choose, to construct an artist book with at least ten full page spreads.</p>
             </div>
-        </div>
-        <div class="twocolumngrid">
-            <img src="./img/f24_artistsbooks/newsignin_cover.jpg" style="border: .25px solid #000000;">
-            <img src="./img/f24_artistsbooks/newsignin_spread17.jpg" style="border: .25px solid #000000;">
-            <img src="./img/f24_artistsbooks/newsignin_spread4.jpg" style="border: .25px solid #000000;">
-            <img src="./img/f24_artistsbooks/newsignin_spread5.jpg" style="border: .25px solid #000000;">
-            <img src="./img/f24_artistsbooks/newsignin_spread8.jpg" style="border: .25px solid #000000;">
-            <img src="./img/f24_artistsbooks/newsignin_spread13.jpg" style="border: .25px solid #000000;">
-            
-        </div>
-        <img src="./img/f24_artistsbooks/newsignin_pages.jpg" >
+            <div class="twocolumngrid">
+                <img src="./img/f24_artistsbooks/newsignin_cover.jpg" style="border: .25px solid #000000;">
+                <img src="./img/f24_artistsbooks/newsignin_spread17.jpg" style="border: .25px solid #000000;">
+                <img src="./img/f24_artistsbooks/newsignin_spread4.jpg" style="border: .25px solid #000000;">
+                <img src="./img/f24_artistsbooks/newsignin_spread5.jpg" style="border: .25px solid #000000;">
+                <img src="./img/f24_artistsbooks/newsignin_spread8.jpg" style="border: .25px solid #000000;">
+                <img src="./img/f24_artistsbooks/newsignin_spread13.jpg" style="border: .25px solid #000000;">
+            </div>
+            <img src="./img/f24_artistsbooks/newsignin_pages.jpg">
+        </main>
+        
     </div>
 
 </body>

@@ -9,55 +9,61 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="img/smiley.jpg">
     
-    <script src="./script.js" defer></script>
+    <script src="/script.js" defer></script>
     
 </head>
 <body>
 
-    <header class="header">
+    <div class="layout">
 
-        <div class="main-title">
-            <a href="/index.html">JANICE CHEUNG</a>
-        </div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <span class="main-title">
+                    <a href="/index.html">JANICE CHEUNG</a>
+                </span>
+                <button class="btn menu-toggle" aria-expanded="false" aria-controls="sidebar-info">menu</button>
+            </div>
+            <div class="sidebar-info" id="sidebar-info">
+                <p>is a designer based in Brooklyn, New York. She graduated with a Bachelor of Fine Arts (BFA) in Communication Design with a minor in Printmaking from Parsons School of Design. She is passionate about graphic communication design, specifically print production, as well as all things creative, especially when it comes to tactility.</p>
+                <div>
+                    <a href="mailto:cheungayin@gmail.com">email</a><br>
+                    <a href="https://www.linkedin.com/in/cheungayin/" target="_blank">linkedin</a><br>
+                    <a href="https://www.instagram.com/cheungayin_/" target="_blank">instagram</a><br>
+                    <a href="https://www.are.na/janice-cheung" target="_blank">are.na</a><br>
+                    <a href="https://open.spotify.com/user/cheungayin?si=2dfdb496023a445a" target="_blank">spotify</a>
+                </div>
+                <p>this page is showing selected work!<br>
+                <a href="/archive.html">> more work in the archive!</a><br>
+                    <!-- grid view showing all the work ive done :P -->
+                <a href="/info.html">info</a></p>
+            </div>
+        </aside>
 
-        <ul class="navigation">
-            <li><a href="/index.html">design</a></li>
-            <li><a href="/photography.html">photography</a></li>
-        </ul>
+        <main class="content">
+            <h1>bunny bookmark</h1>
+            <h3>for <a href="https://parsons.github.io/offset/" target="_blank">Offset Art Book Fair</a> (October 2025)</h3>
 
-        <div class="navigation">
-            <a href="/info.html">info</a>
-        </div>
-
-    </header>
-
-    <div>
-        <h1>bunny bookmark</h1>
-        <h3>for <a href="https://parsons.github.io/offset/" target="_blank">Offset Art Book Fair</a> (October 2025)</h3>
-
-        <div class="halfhalf">
             <div>
+                <img src="./img/crochet/bunnybookmark1.jpg">
                 <p>Corcheted a lil bunny bookmark for Offset 2025 and making a few more for friends.<br><br>
                     Available for sale! Please <a href="https://www.instagram.com/cheungayin_/">DM on insta</a> or <a href="mailto: cheungayin@gmail.com">email</a> me :p<br><br>
                     Width: 4”<br>
                     Height: 4.5”<br>
                     Yarn: Aunt Lydia's® Size 10 Classic Cotton Crochet Thread in Natural (100% Mercerized cotton, lace)
                 </p>
-            </div>
-            <div class="twocolumngrid">
-                <img src="./img/crochet/bunnybookmark1.jpg">
                 <img src="./img/crochet/bunnybookmark2.jpg">
             </div>
-        </div>
-        <div class="twocolumngrid">
-            <p>
-                Thank you for the opportunity to be a part of my second Offset Art Book Fair! <br><br>
-                A little more about Offset 2025 Art Book Fair:<br>
-                Parsons Communication Design is thrilled to announce the Second Annual Offset Art Book Fair, hosted in partnership with <a href="https://draw-down.com/">Draw Down Books</a>. You'll find us in 2 W 13th St. on 5th Avenue– on the sixth floor's main atrium space.<br><br>
-                Offset facilitates the exhibition & vending of posters, prints, books, and other ephemera; with the effort of highlighting and supporting small press publishing & zine-making culture.
-            </p>
-            <img src="https://d3m889aznlr23d.cloudfront.net/img/events/id/459/459281119/assets/ab6ca2f2948ba3ae03709fc0d28d3334.offset_splash-banner.jpg">
-        </div>
+            
+            <div class="twocolumngrid">
+                <p>
+                    Thank you for the opportunity to be a part of my second Offset Art Book Fair! <br><br>
+                    A little more about Offset 2025 Art Book Fair:<br>
+                    Parsons Communication Design is thrilled to announce the Second Annual Offset Art Book Fair, hosted in partnership with <a href="https://draw-down.com/">Draw Down Books</a>. You'll find us in 2 W 13th St. on 5th Avenue– on the sixth floor's main atrium space.<br><br>
+                    Offset facilitates the exhibition & vending of posters, prints, books, and other ephemera; with the effort of highlighting and supporting small press publishing & zine-making culture.
+                </p>
+                <img src="https://d3m889aznlr23d.cloudfront.net/img/events/id/459/459281119/assets/ab6ca2f2948ba3ae03709fc0d28d3334.offset_splash-banner.jpg">
+            </div>
+        </main>
         
     </div>
 

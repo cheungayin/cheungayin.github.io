@@ -58,11 +58,11 @@ body{
     background-color: white;
     font-size: 0.8em;
     font-family: "DinamoABCWhyte-Regular", sans-serif;
-    margin: 0.95em;
+    /* margin: 0.95em; */
     color: #000000;
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>☝️</text></svg>") 16 0, auto;
 }
-.header{
+/* .header{
     margin-top: -0.95em;
     width: 97vw;
     height: 7vh;
@@ -75,31 +75,73 @@ body{
     position: sticky;
     z-index: 999;
     border-bottom: 1px solid black; 
-}
+} */
 .main-title{
     font-weight: bolder;
     text-align: left;
 }
 .main-title a:link{
-    /* text-decoration: none; */
     color:#000000;
 }
 .main-title a:hover{
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='60' style='fill:black;font-size:30px;'><text y='50%'>🏠</text></svg>") 16 0, auto;
+
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) 2fr; /* ~1/3 and 2/3 */
+    margin: 0;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;      /* sidebar scrolls on its own if content gets tall */
+    box-sizing: border-box;
+    padding: 0.95em;
+    border-right: 1px solid black;
+}
+.sidebar .navigation{
+    flex-direction: column;
+    row-gap: .25em;
+    padding: 0;
+    margin: .75em 0;
+}
+.sidebar-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+.sidebar-info{
+    margin: 0;
+}
+.menu-toggle{
+    display: none;
+}
+
+.content{
+    min-width: 0;
+    padding-left: 0.95em;
+    padding-right: 0.95em;
 }
 .navigation{
     display: flex;
     flex-direction: row;
-    text-align: right;
+    /* text-align: right; */
     list-style-type: none;
     padding: 0;
     column-gap: 2em;
     right: 0;
 }
-.navigation a:link{
+
+/* .navigation a:link{
     color: #000000;
-}
-.mobile-menu{
+} */
+
+/* old mobile nav... */
+/* .mobile-menu{
     opacity: 0;
     display: none;
     position: absolute;
@@ -140,7 +182,7 @@ body{
     display: flex;
     position: absolute;
     background: #ffffff;
-}
+} */
 
 /* filter that i dont want to figure out for now... */
 .filter{
@@ -170,8 +212,8 @@ body{
     padding-right: .5em;
     display: inline-block;
     position: sticky;
-    top: 5.75em;
-    margin-right: .5em;
+    top: 2em;
+    margin: 0;
     background-color: #ffffff;
 }
 
@@ -194,13 +236,15 @@ h1{
     padding: .5em;
     display: inline-flex;
     color: #ffffff;
+    margin-bottom: -0.5em;
+
 }
 h2{
     font-family: "DinamoABCWhyte-Bold", sans-serif;
     font-size: 100%;
     font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: -.5em;
+    font-style:italic;
+    margin-bottom: -1em;
 }
 h3{
     font-family: "DinamoABCWhyte-Bold", sans-serif;
@@ -218,7 +262,6 @@ div{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
 #resume_bullet_points{
     margin-top: -.75em;
 }
@@ -262,34 +305,33 @@ a:active{
     color: #ff3000;
 }
 
-/* iframe{
+iframe{
     width: 100%;
-    height: 95vh;
-    object-fit: contain;
+    height: auto;
+    aspect-ratio: 16/9;
     border: 0;
-} */
+    border-radius: .25em;
+}
 
 .things{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    /* margin-top: 2em; */
 }
 .things div{
     padding: 0;
     margin-bottom: -0.5rem;
 }
-/* .things p{
-    font-family: "DinamoABCWhyte-Light", sans-serif;
-}
-.things ul{
-    font-family: "DinamoABCWhyte-Light", sans-serif;
-} */
 .things a:link{
     color: #000000;
 }
 .things a:hover{
     text-decoration: none;
     color: #1b0fd7;
+}
+#archive{
+    grid-template-columns: repeat(2, 1fr);
 }
 
 /* #aboutme{
@@ -363,13 +405,13 @@ a:active{
 
 .twocolumngrid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
 
 .threecolumngrid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -437,6 +479,48 @@ a:active{
     .header{
         width: 96vw;
     }
+    .layout{
+        grid-template-columns: 1fr;
+    }    
+    .sidebar{
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: auto;
+        overflow: visible;
+        padding: 0;
+        background: #ffffff;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+    .sidebar-top{
+        height: 3.75em;
+        margin: 0;
+        padding: 0 .95em;
+        box-sizing: border-box;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    /* the menu panel: hidden by default, drops down over the portfolio */
+    .sidebar-info{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 3em);
+        overflow-y: auto;
+        padding: 0 .95em .95em;
+        background: #ffffff;
+        border-bottom: 1px solid black;
+    }
+    .sidebar.open .sidebar-info{
+        display: block;
+    }
+    #myBtnContainer{
+        top: 5.5em;
+    }
     /* .navigation{
         display: none;
     } */
@@ -445,6 +529,9 @@ a:active{
         display: block;
     }
     .things{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #archive{
         grid-template-columns: repeat(1, 1fr);
     }
     /* #aboutme{
@@ -473,13 +560,21 @@ a:active{
 }
 
 @media screen and (min-width: 1024px){
-    .things{
+    /* .things{
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
     body{
         font-size: 0.8em;
     }
     .photo-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .twocolumngrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .threecolumngrid{
         grid-template-columns: repeat(3, 1fr);
     }
 }

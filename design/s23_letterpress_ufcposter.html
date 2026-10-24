@@ -9,37 +9,42 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="img/smiley.jpg">
     
-    <script src="./script.js" defer></script>
+    <script src="/script.js" defer></script>
     
 </head>
 <body>
 
-    <header class="header">
+    <div class="layout">
 
-        <div class="main-title">
-            <a href="/index.html">JANICE CHEUNG</a>
-        </div>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <span class="main-title">
+                    <a href="/index.html">JANICE CHEUNG</a>
+                </span>
+                <button class="btn menu-toggle" aria-expanded="false" aria-controls="sidebar-info">menu</button>
+            </div>
+            <div class="sidebar-info" id="sidebar-info">
+                <p>is a designer based in Brooklyn, New York. She graduated with a Bachelor of Fine Arts (BFA) in Communication Design with a minor in Printmaking from Parsons School of Design. She is passionate about graphic communication design, specifically print production, as well as all things creative, especially when it comes to tactility.</p>
+                <div>
+                    <a href="mailto:cheungayin@gmail.com">email</a><br>
+                    <a href="https://www.linkedin.com/in/cheungayin/" target="_blank">linkedin</a><br>
+                    <a href="https://www.instagram.com/cheungayin_/" target="_blank">instagram</a><br>
+                    <a href="https://www.are.na/janice-cheung" target="_blank">are.na</a><br>
+                    <a href="https://open.spotify.com/user/cheungayin?si=2dfdb496023a445a" target="_blank">spotify</a>
+                </div>
+                <p>this page is showing selected work!<br>
+                <a href="/archive.html">> more work in the archive!</a><br>
+                    <!-- grid view showing all the work ive done :P -->
+                <a href="/info.html">info</a></p>
+            </div>
+        </aside>
 
-        <ul class="navigation">
-            <li><a href="/index.html">design</a></li>
-            <li><a href="/photography.html">photography</a></li>
-        </ul>
+        <main class="content">
+            <h1>UFC 287: Pereira vs Adesanya 2 (Apr 2023)</h1>
+            <h3>for ARTIST'S BOOKS: LETTERPRESS with <a href="https://www.martinmazorra.net/" target="_blank">Martin Mazorra</a> (Spring 2023): PROJECT #3 Event Poster</h3>
 
-        <div class="navigation">
-            <a href="/info.html">info</a>
-        </div>
-
-    </header>
-
-    <div>
-        <h1>UFC 287: Pereira vs Adesanya 2 (Apr 2023)</h1>
-        <h3>for ARTIST'S BOOKS: LETTERPRESS with <a href="https://www.martinmazorra.net/" target="_blank">Martin Mazorra</a> (Spring 2023): PROJECT #3 Event Poster</h3>
-
-        <div class="halfhalf">
             <div>
                 <img src="./img/s23_letterpress/eventposter.jpg">
-            </div>
-            <div>
                 <p>Brief: <br>
                     Select an upcoming event. The subject you select should be for an actual event, rather than a hypothetical happening. Choose something that is out of the mainstream and that has not already been branded with image stylization and typographic restrictions.
                 </p>
@@ -49,17 +54,16 @@
                     Edition of 15
                 </p>
             </div>
-        </div>
-        <img src="./img/s23_letterpress/eventposter2.jpg">
-        <div class="twocolumngrid">
-            <img src="./img/s23_letterpress/img017.jpg">
-            <img src="./img/s23_letterpress/img018.jpg">
-            <img src="./img/s23_letterpress/img021.jpg">
-        </div>
-        <!-- <div>
-            <p>below is the PDF version of my zine on Chinese and Thai Wedding traditions:</p>
-            <embed src="./pdf/s23_core2type_project2home_final.pdf" type="application/pdf" width="100%" height="750px">
-        </div> -->
+
+            <img src="./img/s23_letterpress/eventposter2.jpg">
+            <div class="twocolumngrid">
+                <img src="./img/s23_letterpress/img017.jpg">
+                <img src="./img/s23_letterpress/img018.jpg">
+                <img src="./img/s23_letterpress/img021.jpg">
+            </div>
+
+        </main>
+
     </div>
 
 </body>
